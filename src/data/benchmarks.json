@@ -1,0 +1,114 @@
+{
+  "advertising": {
+    "google_ads": {
+      "avg_cpc": 2.69,
+      "avg_cpm": 3.12,
+      "avg_ctr": 3.17,
+      "avg_conversion_rate": 3.75,
+      "avg_roas": 2.0,
+      "avg_cpa": 48.96
+    },
+    "facebook_ads": {
+      "avg_cpc": 1.72,
+      "avg_cpm": 7.19,
+      "avg_ctr": 0.90,
+      "avg_conversion_rate": 9.21,
+      "avg_roas": 2.5,
+      "avg_cpa": 18.68
+    },
+    "instagram_ads": {
+      "avg_cpc": 3.56,
+      "avg_cpm": 7.91,
+      "avg_ctr": 0.58,
+      "avg_conversion_rate": 1.08,
+      "avg_roas": 1.8
+    },
+    "linkedin_ads": {
+      "avg_cpc": 5.26,
+      "avg_cpm": 6.59,
+      "avg_ctr": 0.65,
+      "avg_conversion_rate": 2.35,
+      "avg_roas": 1.5
+    },
+    "tiktok_ads": {
+      "avg_cpc": 1.00,
+      "avg_cpm": 10.00,
+      "avg_ctr": 0.84,
+      "avg_conversion_rate": 1.50,
+      "avg_roas": 2.0
+    }
+  },
+  "email_marketing": {
+    "avg_open_rate": 21.33,
+    "avg_click_rate": 2.62,
+    "avg_conversion_rate": 1.22,
+    "avg_unsubscribe_rate": 0.26,
+    "avg_roi_per_dollar": 36,
+    "avg_list_growth_rate": 2.5,
+    "avg_revenue_per_subscriber": 0.11
+  },
+  "seo": {
+    "avg_organic_ctr_position_1": 27.6,
+    "avg_organic_ctr_position_2": 15.8,
+    "avg_organic_ctr_position_3": 11.0,
+    "avg_organic_ctr_position_5": 5.1,
+    "avg_organic_ctr_position_10": 2.4,
+    "avg_time_to_rank_months": 6,
+    "avg_content_cost_per_article": 250,
+    "avg_organic_conversion_rate": 2.4,
+    "avg_bounce_rate": 47
+  },
+  "content_marketing": {
+    "avg_cost_per_blog_post": 250,
+    "avg_blog_traffic_per_month": 1500,
+    "avg_content_conversion_rate": 2.35,
+    "avg_social_shares_per_post": 50,
+    "avg_time_on_page_seconds": 132,
+    "avg_roi_ratio": 3.0
+  },
+  "landing_pages": {
+    "avg_conversion_rate": 5.89,
+    "good_conversion_rate": 11.45,
+    "top_conversion_rate": 27.4,
+    "avg_bounce_rate": 60.0,
+    "avg_time_on_page_seconds": 52
+  },
+  "freelance": {
+    "avg_hourly_rate_marketing": 75,
+    "avg_hourly_rate_design": 65,
+    "avg_hourly_rate_development": 100,
+    "avg_hourly_rate_writing": 50,
+    "avg_project_profit_margin": 35,
+    "avg_billable_hours_per_week": 30,
+    "avg_client_retention_rate": 72
+  },
+  "saas": {
+    "avg_churn_rate_monthly": 5.0,
+    "avg_ltv_cac_ratio": 3.0,
+    "avg_gross_margin": 70,
+    "avg_net_margin": 15,
+    "avg_arpu_monthly": 50,
+    "avg_trial_conversion": 25
+  },
+  "influencer": {
+    "avg_engagement_rate_micro": 3.86,
+    "avg_engagement_rate_mid": 1.63,
+    "avg_engagement_rate_macro": 1.21,
+    "avg_cost_per_post_micro": 250,
+    "avg_cost_per_post_mid": 2500,
+    "avg_cost_per_post_macro": 10000,
+    "avg_roi": 5.78
+  },
+  "podcast": {
+    "avg_cpm_rate": 25,
+    "avg_download_per_episode": 141,
+    "avg_listener_growth_monthly": 5,
+    "avg_sponsorship_fill_rate": 60
+  },
+  "ab_testing": {
+    "avg_baseline_conversion": 3.0,
+    "min_detectable_effect": 10,
+    "confidence_level": 95,
+    "statistical_power": 80
+  }
+}

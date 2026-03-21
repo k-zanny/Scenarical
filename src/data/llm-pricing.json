@@ -1,0 +1,131 @@
+{
+  "last_updated": "2026-03-01",
+  "models": {
+    "gpt-4o": {
+      "provider": "OpenAI",
+      "input_per_1m": 2.50,
+      "output_per_1m": 10.00,
+      "context_window": 128000,
+      "category": "flagship"
+    },
+    "gpt-4o-mini": {
+      "provider": "OpenAI",
+      "input_per_1m": 0.15,
+      "output_per_1m": 0.60,
+      "context_window": 128000,
+      "category": "budget"
+    },
+    "gpt-4.1": {
+      "provider": "OpenAI",
+      "input_per_1m": 2.00,
+      "output_per_1m": 8.00,
+      "context_window": 1047576,
+      "category": "flagship"
+    },
+    "gpt-4.1-mini": {
+      "provider": "OpenAI",
+      "input_per_1m": 0.40,
+      "output_per_1m": 1.60,
+      "context_window": 1047576,
+      "category": "budget"
+    },
+    "gpt-4.1-nano": {
+      "provider": "OpenAI",
+      "input_per_1m": 0.10,
+      "output_per_1m": 0.40,
+      "context_window": 1047576,
+      "category": "budget"
+    },
+    "o3": {
+      "provider": "OpenAI",
+      "input_per_1m": 10.00,
+      "output_per_1m": 40.00,
+      "context_window": 200000,
+      "category": "reasoning"
+    },
+    "o3-mini": {
+      "provider": "OpenAI",
+      "input_per_1m": 1.10,
+      "output_per_1m": 4.40,
+      "context_window": 200000,
+      "category": "reasoning"
+    },
+    "o4-mini": {
+      "provider": "OpenAI",
+      "input_per_1m": 1.10,
+      "output_per_1m": 4.40,
+      "context_window": 200000,
+      "category": "reasoning"
+    },
+    "claude-opus-4": {
+      "provider": "Anthropic",
+      "input_per_1m": 15.00,
+      "output_per_1m": 75.00,
+      "context_window": 200000,
+      "category": "flagship"
+    },
+    "claude-sonnet-4": {
+      "provider": "Anthropic",
+      "input_per_1m": 3.00,
+      "output_per_1m": 15.00,
+      "context_window": 200000,
+      "category": "flagship"
+    },
+    "claude-haiku-3.5": {
+      "provider": "Anthropic",
+      "input_per_1m": 0.80,
+      "output_per_1m": 4.00,
+      "context_window": 200000,
+      "category": "budget"
+    },
+    "gemini-2.5-pro": {
+      "provider": "Google",
+      "input_per_1m": 1.25,
+      "output_per_1m": 10.00,
+      "context_window": 1048576,
+      "category": "flagship"
+    },
+    "gemini-2.5-flash": {
+      "provider": "Google",
+      "input_per_1m": 0.15,
+      "output_per_1m": 0.60,
+      "context_window": 1048576,
+      "category": "budget"
+    },
+    "gemini-2.0-flash": {
+      "provider": "Google",
+      "input_per_1m": 0.10,
+      "output_per_1m": 0.40,
+      "context_window": 1048576,
+      "category": "budget"
+    },
+    "deepseek-v3": {
+      "provider": "DeepSeek",
+      "input_per_1m": 0.27,
+      "output_per_1m": 1.10,
+      "context_window": 131072,
+      "category": "budget"
+    },
+    "deepseek-r1": {
+      "provider": "DeepSeek",
+      "input_per_1m": 0.55,
+      "output_per_1m": 2.19,
+      "context_window": 131072,
+      "category": "reasoning"
+    },
+    "llama-4-maverick": {
+      "provider": "Meta (via providers)",
+      "input_per_1m": 0.20,
+      "output_per_1m": 0.60,
+      "context_window": 1048576,
+      "category": "open-source"
+    },
+    "mistral-large": {
+      "provider": "Mistral",
+      "input_per_1m": 2.00,
+      "output_per_1m": 6.00,
+      "context_window": 128000,
+      "category": "flagship"
+    }
+  }
+}

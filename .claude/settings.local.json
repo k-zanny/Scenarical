@@ -1,0 +1,25 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx create-next-app@14 . --typescript --tailwind --eslint --app --src-dir --import-alias \"@/*\" --use-npm)",
+      "Bash(npx create-next-app@14 scenarical-temp --typescript --tailwind --eslint --app --src-dir --import-alias \"@/*\" --use-npm)",
+      "Bash(rm -rf scenarical-temp)",
+      "Bash(cp -r scenarical-temp/* .)",
+      "Bash(cp scenarical-temp/.eslintrc.json .)",
+      "Bash(cp scenarical-temp/.gitignore .)",
+      "Bash(cp -r scenarical-temp/.* .)",
+      "Bash(shopt -s dotglob)",
+      "Bash(mv scenarical-temp/* .)",
+      "Bash(mv scenarical-temp/.eslintrc.json .)",
+      "Bash(mv scenarical-temp/.gitignore .)",
+      "Bash(npm install:*)",
+      "Bash(npx next:*)",
+      "Bash(git init:*)",
+      "Bash(git add:*)",
+      "Bash(taskkill //F //IM node.exe)",
+      "Bash(cd:*)",
+      "Bash(curl -s http://localhost:3000)",
+      "Bash(ipconfig)"
+    ]
+  }
+}

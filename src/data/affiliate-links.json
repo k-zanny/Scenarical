@@ -1,0 +1,44 @@
+{
+  "roas-calculator": {
+    "tool": "Semrush",
+    "cta": "Track & optimize your ROAS with Semrush",
+    "url": "#semrush-affiliate",
+    "trial": "Try free for 7 days"
+  },
+  "cpc-cpm-cpa-converter": {
+    "tool": "Google Ads",
+    "cta": "Manage your ad campaigns smarter with Google Ads Editor",
+    "url": "#google-ads-affiliate",
+    "trial": "Start free"
+  },
+  "ab-test-calculator": {
+    "tool": "VWO",
+    "cta": "Run professional A/B tests with VWO",
+    "url": "#vwo-affiliate",
+    "trial": "Start free trial"
+  },
+  "email-roi-calculator": {
+    "tool": "Beehiiv",
+    "cta": "Grow your newsletter revenue with Beehiiv",
+    "url": "#beehiiv-affiliate",
+    "trial": "Start free"
+  },
+  "content-roi-calculator": {
+    "tool": "Surfer SEO",
+    "cta": "Optimize your content ROI with Surfer SEO",
+    "url": "#surfer-affiliate",
+    "trial": "Try free"
+  },
+  "ad-budget-planner": {
+    "tool": "Semrush",
+    "cta": "Plan & allocate your ad budget with Semrush",
+    "url": "#semrush-affiliate",
+    "trial": "Try free for 7 days"
+  },
+  "landing-page-estimator": {
+    "tool": "Unbounce",
+    "cta": "Build high-converting landing pages with Unbounce",
+    "url": "#unbounce-affiliate",
+    "trial": "Start free trial"
+  }
+}
