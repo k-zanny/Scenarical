@@ -27,6 +27,9 @@ export const metadata: Metadata = {
   description:
     "26+ free interactive calculators for digital marketers & freelancers. Compare scenarios, benchmark against industry averages, and share data-driven decisions with your team.",
   metadataBase: new URL("https://scenarical.com"),
+  verification: {
+    google: "_j14aqsor7d6l5-zIO0n-rugzgcXEYhewqnmsdkh2fo",
+  },
   openGraph: {
     title: "Scenarical — Marketing Decisions, Powered by Real Data",
     description:
