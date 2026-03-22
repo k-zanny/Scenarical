@@ -1,17 +1,15 @@
 import { Metadata } from 'next';
-import { getToolBySlug } from '@/lib/tools-data';
 import { generateToolJsonLd } from '@/components/ToolPageWrapper';
-import ComingSoon from '@/components/ComingSoon';
-
-const tool = getToolBySlug('llm-pricing-calculator');
+import LLMPricingCalculatorClient from './LLMPricingCalculatorClient';
 
 export const metadata: Metadata = {
-  title: `${tool?.name || 'llm-pricing-calculator'} — Coming Soon | Scenarical`,
-  description: tool?.description || '',
+  title: 'LLM API Pricing Calculator — Compare AI Model Costs | Scenarical',
+  description: 'Compare API pricing for GPT-4o, Claude Sonnet 4, Gemini 2.5, DeepSeek, and more. Calculate monthly costs by token usage and see which LLM fits your budget.',
 };
 
-export default function Page() {
+export default function LLMPricingCalculatorPage() {
   const jsonLd = generateToolJsonLd('llm-pricing-calculator');
+
   return (
     <>
       {jsonLd && (
@@ -20,7 +18,7 @@ export default function Page() {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       )}
-      <ComingSoon slug="llm-pricing-calculator" />
+      <LLMPricingCalculatorClient />
     </>
   );
 }

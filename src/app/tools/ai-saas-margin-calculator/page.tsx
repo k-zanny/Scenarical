@@ -1,17 +1,15 @@
 import { Metadata } from 'next';
-import { getToolBySlug } from '@/lib/tools-data';
 import { generateToolJsonLd } from '@/components/ToolPageWrapper';
-import ComingSoon from '@/components/ComingSoon';
-
-const tool = getToolBySlug('ai-saas-margin-calculator');
+import AISaaSMarginCalculatorClient from './AISaaSMarginCalculatorClient';
 
 export const metadata: Metadata = {
-  title: `${tool?.name || 'ai-saas-margin-calculator'} — Coming Soon | Scenarical`,
-  description: tool?.description || '',
+  title: 'AI SaaS Margin Calculator — Model Gross Margins for AI Products | Scenarical',
+  description: 'Calculate gross margins for AI-powered SaaS products. Model LLM costs, infrastructure, and support expenses against revenue to optimize your AI SaaS unit economics.',
 };
 
-export default function Page() {
+export default function AISaaSMarginCalculatorPage() {
   const jsonLd = generateToolJsonLd('ai-saas-margin-calculator');
+
   return (
     <>
       {jsonLd && (
@@ -20,7 +18,7 @@ export default function Page() {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       )}
-      <ComingSoon slug="ai-saas-margin-calculator" />
+      <AISaaSMarginCalculatorClient />
     </>
   );
 }

@@ -1,17 +1,15 @@
 import { Metadata } from 'next';
-import { getToolBySlug } from '@/lib/tools-data';
 import { generateToolJsonLd } from '@/components/ToolPageWrapper';
-import ComingSoon from '@/components/ComingSoon';
-
-const tool = getToolBySlug('llm-comparison');
+import LLMComparisonClient from './LLMComparisonClient';
 
 export const metadata: Metadata = {
-  title: `${tool?.name || 'llm-comparison'} — Coming Soon | Scenarical`,
-  description: tool?.description || '',
+  title: 'Claude vs ChatGPT vs Gemini Comparison Calculator — Free Tool | Scenarical',
+  description: 'Compare LLM costs across Claude, ChatGPT, Gemini, DeepSeek, and more. Calculate monthly API costs, find the cheapest model for your context window needs, and visualize cost differences in real time.',
 };
 
-export default function Page() {
+export default function LLMComparisonPage() {
   const jsonLd = generateToolJsonLd('llm-comparison');
+
   return (
     <>
       {jsonLd && (
@@ -20,7 +18,7 @@ export default function Page() {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       )}
-      <ComingSoon slug="llm-comparison" />
+      <LLMComparisonClient />
     </>
   );
 }

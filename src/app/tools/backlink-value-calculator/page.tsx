@@ -1,17 +1,15 @@
 import { Metadata } from 'next';
-import { getToolBySlug } from '@/lib/tools-data';
 import { generateToolJsonLd } from '@/components/ToolPageWrapper';
-import ComingSoon from '@/components/ComingSoon';
-
-const tool = getToolBySlug('backlink-value-calculator');
+import BacklinkValueCalculatorClient from './BacklinkValueCalculatorClient';
 
 export const metadata: Metadata = {
-  title: `${tool?.name || 'backlink-value-calculator'} — Coming Soon | Scenarical`,
-  description: tool?.description || '',
+  title: 'Backlink Value Calculator — Free Link Quality Estimator | Scenarical',
+  description: 'Calculate the true value of any backlink based on domain authority, relevance, link placement, and referral traffic. Determine fair pricing for link-building opportunities.',
 };
 
-export default function Page() {
+export default function BacklinkValueCalculatorPage() {
   const jsonLd = generateToolJsonLd('backlink-value-calculator');
+
   return (
     <>
       {jsonLd && (
@@ -20,7 +18,7 @@ export default function Page() {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       )}
-      <ComingSoon slug="backlink-value-calculator" />
+      <BacklinkValueCalculatorClient />
     </>
   );
 }

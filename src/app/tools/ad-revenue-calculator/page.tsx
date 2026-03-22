@@ -1,17 +1,15 @@
 import { Metadata } from 'next';
-import { getToolBySlug } from '@/lib/tools-data';
 import { generateToolJsonLd } from '@/components/ToolPageWrapper';
-import ComingSoon from '@/components/ComingSoon';
-
-const tool = getToolBySlug('ad-revenue-calculator');
+import AdRevenueCalculatorClient from './AdRevenueCalculatorClient';
 
 export const metadata: Metadata = {
-  title: `${tool?.name || 'ad-revenue-calculator'} — Coming Soon | Scenarical`,
-  description: tool?.description || '',
+  title: 'Website Ad Revenue Calculator — Free Online Calculator | Scenarical',
+  description: 'Estimate your website ad revenue based on pageviews, RPM, fill rate, and viewability. Model standard vs premium ad inventory to optimize your monetization strategy.',
 };
 
-export default function Page() {
+export default function AdRevenueCalculatorPage() {
   const jsonLd = generateToolJsonLd('ad-revenue-calculator');
+
   return (
     <>
       {jsonLd && (
@@ -20,7 +18,7 @@ export default function Page() {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       )}
-      <ComingSoon slug="ad-revenue-calculator" />
+      <AdRevenueCalculatorClient />
     </>
   );
 }

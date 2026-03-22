@@ -56,7 +56,13 @@
     "avg_time_to_rank_months": 6,
     "avg_content_cost_per_article": 250,
     "avg_organic_conversion_rate": 2.4,
-    "avg_bounce_rate": 47
+    "avg_bounce_rate": 47,
+    "avg_backlink_cost": 350,
+    "avg_da_new_site": 10,
+    "avg_da_established": 40,
+    "avg_pages_per_da_point": 15,
+    "avg_keyword_cpc": 2.50,
+    "avg_organic_traffic_value_per_visit": 0.75
   },
   "content_marketing": {
     "avg_cost_per_blog_post": 250,
@@ -78,9 +84,13 @@
     "avg_hourly_rate_design": 65,
     "avg_hourly_rate_development": 100,
     "avg_hourly_rate_writing": 50,
+    "avg_hourly_rate_consulting": 150,
     "avg_project_profit_margin": 35,
     "avg_billable_hours_per_week": 30,
-    "avg_client_retention_rate": 72
+    "avg_client_retention_rate": 72,
+    "avg_annual_expenses": 15000,
+    "avg_weeks_off": 4,
+    "avg_overhead_percent": 25
   },
   "saas": {
     "avg_churn_rate_monthly": 5.0,
@@ -88,7 +98,10 @@
     "avg_gross_margin": 70,
     "avg_net_margin": 15,
     "avg_arpu_monthly": 50,
-    "avg_trial_conversion": 25
+    "avg_trial_conversion": 25,
+    "avg_payback_months": 12,
+    "avg_expansion_revenue_percent": 20,
+    "avg_support_cost_per_user": 5
   },
   "influencer": {
     "avg_engagement_rate_micro": 3.86,
@@ -97,18 +110,68 @@
     "avg_cost_per_post_micro": 250,
     "avg_cost_per_post_mid": 2500,
     "avg_cost_per_post_macro": 10000,
-    "avg_roi": 5.78
+    "avg_roi": 5.78,
+    "avg_cpe_instagram": 0.10,
+    "avg_cpe_tiktok": 0.05,
+    "avg_cpe_youtube": 0.15,
+    "avg_story_rate_multiplier": 0.4,
+    "avg_video_rate_multiplier": 2.0
   },
   "podcast": {
     "avg_cpm_rate": 25,
     "avg_download_per_episode": 141,
     "avg_listener_growth_monthly": 5,
-    "avg_sponsorship_fill_rate": 60
+    "avg_sponsorship_fill_rate": 60,
+    "avg_premium_conversion": 3,
+    "avg_episodes_per_month": 4,
+    "avg_mid_roll_cpm": 25,
+    "avg_pre_roll_cpm": 18,
+    "avg_production_cost_per_episode": 200
   },
   "ab_testing": {
     "avg_baseline_conversion": 3.0,
     "min_detectable_effect": 10,
     "confidence_level": 95,
     "statistical_power": 80
+  },
+  "newsletter": {
+    "avg_subscriber_value_monthly": 0.11,
+    "avg_open_rate": 42,
+    "avg_click_rate": 3.5,
+    "avg_sponsor_cpm": 50,
+    "avg_paid_subscriber_rate": 5,
+    "avg_churn_rate_monthly": 2.5,
+    "avg_acquisition_cost": 3.50,
+    "avg_referral_rate": 2
+  },
+  "course_launches": {
+    "avg_price": 197,
+    "avg_landing_page_conversion": 5,
+    "avg_email_conversion": 3,
+    "avg_refund_rate": 10,
+    "avg_completion_rate": 30,
+    "avg_upsell_rate": 15,
+    "avg_affiliate_commission": 30,
+    "avg_launch_list_size": 5000
+  },
+  "website_ads": {
+    "avg_rpm_display": 5.00,
+    "avg_rpm_premium": 15.00,
+    "avg_rpm_video": 20.00,
+    "avg_fill_rate": 85,
+    "avg_viewability": 70,
+    "avg_ads_per_page": 3,
+    "avg_ctr_display": 0.35
+  },
+  "ai_llm": {
+    "avg_tokens_per_query": 1500,
+    "avg_tokens_per_response": 500,
+    "avg_queries_per_user_day": 10,
+    "avg_embedding_cost_per_1m": 0.10,
+    "avg_vector_db_cost_monthly": 50,
+    "avg_rag_latency_ms": 500,
+    "avg_chunks_per_query": 5,
+    "avg_ai_saas_cogs_percent": 35,
+    "avg_ai_saas_gross_margin": 65
   }
 }

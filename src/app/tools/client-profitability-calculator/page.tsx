@@ -1,17 +1,15 @@
 import { Metadata } from 'next';
-import { getToolBySlug } from '@/lib/tools-data';
 import { generateToolJsonLd } from '@/components/ToolPageWrapper';
-import ComingSoon from '@/components/ComingSoon';
-
-const tool = getToolBySlug('client-profitability-calculator');
+import ClientProfitabilityClient from './ClientProfitabilityClient';
 
 export const metadata: Metadata = {
-  title: `${tool?.name || 'client-profitability-calculator'} — Coming Soon | Scenarical`,
-  description: tool?.description || '',
+  title: 'Client Profitability Calculator — Free Margin & Rate Analyzer | Scenarical',
+  description: 'Calculate client profitability, effective hourly rate, and profit margins for freelancers and agencies. Account for scope creep and benchmark against industry averages.',
 };
 
-export default function Page() {
+export default function ClientProfitabilityCalculatorPage() {
   const jsonLd = generateToolJsonLd('client-profitability-calculator');
+
   return (
     <>
       {jsonLd && (
@@ -20,7 +18,7 @@ export default function Page() {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       )}
-      <ComingSoon slug="client-profitability-calculator" />
+      <ClientProfitabilityClient />
     </>
   );
 }

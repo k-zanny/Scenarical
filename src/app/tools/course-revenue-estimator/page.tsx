@@ -1,17 +1,15 @@
 import { Metadata } from 'next';
-import { getToolBySlug } from '@/lib/tools-data';
 import { generateToolJsonLd } from '@/components/ToolPageWrapper';
-import ComingSoon from '@/components/ComingSoon';
-
-const tool = getToolBySlug('course-revenue-estimator');
+import CourseRevenueEstimatorClient from './CourseRevenueEstimatorClient';
 
 export const metadata: Metadata = {
-  title: `${tool?.name || 'course-revenue-estimator'} — Coming Soon | Scenarical`,
-  description: tool?.description || '',
+  title: 'Course Launch Revenue Estimator — Free Online Calculator | Scenarical',
+  description: 'Estimate course launch revenue, enrollment rates, and ROI. Model landing page conversions, email funnels, upsells, and refund rates with real-time benchmarks.',
 };
 
-export default function Page() {
+export default function CourseRevenueEstimatorPage() {
   const jsonLd = generateToolJsonLd('course-revenue-estimator');
+
   return (
     <>
       {jsonLd && (
@@ -20,7 +18,7 @@ export default function Page() {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       )}
-      <ComingSoon slug="course-revenue-estimator" />
+      <CourseRevenueEstimatorClient />
     </>
   );
 }

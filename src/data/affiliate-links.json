@@ -178,28 +178,143 @@
     },
     "landing-page-estimator": {
       "partner": "unbounce",
-      "postKpi": {
-        "icon": "🎯",
-        "headline": "Build landing pages that convert?",
-        "subline": "Unbounce lets you A/B test pages without code."
-      },
+      "postKpi": { "icon": "🎯", "headline": "Build landing pages that convert?", "subline": "Unbounce lets you A/B test pages without code." },
       "benchmarkCta": "Build better landing pages",
-      "footer": {
-        "headline": "Ready to put these numbers into action?",
-        "subline": "Unbounce lets you build, test, and optimize landing pages without developers — with AI-powered conversion insights."
-      },
-      "seoLinks": [
-        {
-          "section": "The Economics of Conversion Rate Optimization",
-          "anchorText": "Unbounce's Smart Builder uses AI to create landing pages optimized for your specific audience",
-          "context": "To build pages that convert from day one, "
-        },
-        {
-          "section": "Proven Strategies to Increase Conversions",
-          "anchorText": "try Unbounce's drag-and-drop builder with built-in A/B testing",
-          "context": "For a no-code way to test headlines, CTAs, and layouts, "
-        }
-      ]
+      "footer": { "headline": "Ready to put these numbers into action?", "subline": "Unbounce lets you build, test, and optimize landing pages without developers — with AI-powered conversion insights." },
+      "seoLinks": []
+    },
+    "freelance-rate-calculator": {
+      "partner": "semrush",
+      "postKpi": { "icon": "💼", "headline": "Find clients willing to pay premium rates?", "subline": "Semrush helps you identify high-value niches and position your services." },
+      "benchmarkCta": "Find higher-paying clients",
+      "footer": { "headline": "Ready to grow your freelance business?", "subline": "Semrush gives you the market data to position yourself as a premium service provider and win better clients." },
+      "seoLinks": []
+    },
+    "newsletter-value-calculator": {
+      "partner": "beehiiv",
+      "postKpi": { "icon": "📰", "headline": "Maximize your subscriber revenue?", "subline": "Beehiiv helps 100,000+ creators monetize their newsletters." },
+      "benchmarkCta": "Grow your newsletter revenue",
+      "footer": { "headline": "Ready to monetize your newsletter?", "subline": "Beehiiv gives you the tools to grow, engage, and monetize your subscriber base with built-in sponsorships and premium content." },
+      "seoLinks": []
+    },
+    "influencer-pricing-calculator": {
+      "partner": "semrush",
+      "postKpi": { "icon": "⭐", "headline": "Find the right influencers for your budget?", "subline": "Semrush's influencer analytics reveal engagement and audience data." },
+      "benchmarkCta": "Analyze influencer metrics",
+      "footer": { "headline": "Ready to launch your influencer campaign?", "subline": "Semrush helps you find, vet, and track influencer partnerships with real engagement data." },
+      "seoLinks": []
+    },
+    "saas-pricing-calculator": {
+      "partner": "semrush",
+      "postKpi": { "icon": "🔧", "headline": "Benchmark your SaaS metrics against competitors?", "subline": "Semrush provides competitive intelligence for market positioning." },
+      "benchmarkCta": "Analyze competitor pricing",
+      "footer": { "headline": "Ready to optimize your SaaS growth?", "subline": "Semrush gives you the competitive data to price strategically and outperform in your market." },
+      "seoLinks": []
+    },
+    "client-profitability-calculator": {
+      "partner": "semrush",
+      "postKpi": { "icon": "📋", "headline": "Win more profitable clients?", "subline": "Semrush helps you identify and target high-value prospects." },
+      "benchmarkCta": "Find better clients",
+      "footer": { "headline": "Ready to improve your client mix?", "subline": "Semrush helps you identify the markets and niches where your services command the highest margins." },
+      "seoLinks": []
+    },
+    "podcast-revenue-calculator": {
+      "partner": "beehiiv",
+      "postKpi": { "icon": "🎙️", "headline": "Convert listeners into subscribers?", "subline": "Beehiiv helps podcasters build and monetize their audience." },
+      "benchmarkCta": "Grow your podcast audience",
+      "footer": { "headline": "Ready to monetize your podcast?", "subline": "Beehiiv helps podcasters convert listeners into newsletter subscribers and unlock additional revenue streams." },
+      "seoLinks": []
+    },
+    "course-revenue-estimator": {
+      "partner": "unbounce",
+      "postKpi": { "icon": "🎓", "headline": "Build a high-converting course sales page?", "subline": "Unbounce helps course creators maximize enrollment rates." },
+      "benchmarkCta": "Build your course sales page",
+      "footer": { "headline": "Ready to launch your course?", "subline": "Unbounce lets you build and A/B test course sales pages that convert — no code required." },
+      "seoLinks": []
+    },
+    "seo-roi-calculator": {
+      "partner": "semrush",
+      "postKpi": { "icon": "🔍", "headline": "Track your SEO ROI in real time?", "subline": "Semrush monitors your rankings, traffic, and revenue from organic search." },
+      "benchmarkCta": "Track your SEO performance",
+      "footer": { "headline": "Ready to maximize your SEO investment?", "subline": "Semrush gives you the tools to track rankings, analyze competitors, and prove the ROI of every SEO dollar spent." },
+      "seoLinks": []
+    },
+    "da-impact-calculator": {
+      "partner": "semrush",
+      "postKpi": { "icon": "🏛️", "headline": "Boost your domain authority faster?", "subline": "Semrush identifies link-building opportunities to grow your authority." },
+      "benchmarkCta": "Find link opportunities",
+      "footer": { "headline": "Ready to build your domain authority?", "subline": "Semrush's backlink tools help you find high-quality link opportunities and track your authority growth over time." },
+      "seoLinks": []
+    },
+    "traffic-value-calculator": {
+      "partner": "semrush",
+      "postKpi": { "icon": "📈", "headline": "Discover your traffic's true value?", "subline": "Semrush calculates the ad-equivalent value of your organic traffic." },
+      "benchmarkCta": "Analyze your traffic value",
+      "footer": { "headline": "Ready to maximize your traffic value?", "subline": "Semrush shows you exactly what your organic traffic is worth and where to focus for maximum impact." },
+      "seoLinks": []
+    },
+    "keyword-difficulty-estimator": {
+      "partner": "semrush",
+      "postKpi": { "icon": "🔑", "headline": "Find keywords you can actually rank for?", "subline": "Semrush's keyword difficulty scores help you prioritize winnable battles." },
+      "benchmarkCta": "Find easier keywords",
+      "footer": { "headline": "Ready to dominate search results?", "subline": "Semrush analyzes keyword difficulty across 25B+ keywords so you can target opportunities with the best ROI." },
+      "seoLinks": []
+    },
+    "backlink-value-calculator": {
+      "partner": "semrush",
+      "postKpi": { "icon": "🔗", "headline": "Find high-value backlink opportunities?", "subline": "Semrush's backlink database reveals where competitors get their links." },
+      "benchmarkCta": "Find backlink opportunities",
+      "footer": { "headline": "Ready to build valuable backlinks?", "subline": "Semrush's backlink analytics reveal exactly where your competitors earn their links — so you can replicate their success." },
+      "seoLinks": []
+    },
+    "ad-revenue-calculator": {
+      "partner": "semrush",
+      "postKpi": { "icon": "💵", "headline": "Increase your site's ad revenue?", "subline": "Semrush helps you grow the organic traffic that drives ad impressions." },
+      "benchmarkCta": "Grow your traffic",
+      "footer": { "headline": "Ready to maximize your ad revenue?", "subline": "Semrush helps you grow the organic traffic that drives ad impressions, clicks, and revenue." },
+      "seoLinks": []
+    },
+    "llm-pricing-calculator": {
+      "partner": "semrush",
+      "postKpi": { "icon": "🤖", "headline": "Building AI-powered marketing tools?", "subline": "Semrush data APIs power intelligent marketing applications." },
+      "benchmarkCta": "Explore Semrush APIs",
+      "footer": { "headline": "Building with AI? Market with data.", "subline": "Semrush provides the marketing data APIs and competitive intelligence to power your AI-driven applications." },
+      "seoLinks": []
+    },
+    "ai-agent-cost-estimator": {
+      "partner": "semrush",
+      "postKpi": { "icon": "🕹️", "headline": "Automate your marketing with AI agents?", "subline": "Semrush integrates with AI workflows for data-driven automation." },
+      "benchmarkCta": "Automate with data",
+      "footer": { "headline": "Power your AI agents with real marketing data.", "subline": "Semrush APIs provide the competitive intelligence your AI agents need to make smarter marketing decisions." },
+      "seoLinks": []
+    },
+    "token-counter": {
+      "partner": "semrush",
+      "postKpi": { "icon": "🔢", "headline": "Optimize your AI content costs?", "subline": "Semrush helps you plan content strategy to maximize AI efficiency." },
+      "benchmarkCta": "Plan content strategy",
+      "footer": { "headline": "Create more content, spend less on tokens.", "subline": "Semrush's content planning tools help you focus AI resources on the highest-impact topics and keywords." },
+      "seoLinks": []
+    },
+    "llm-comparison": {
+      "partner": "semrush",
+      "postKpi": { "icon": "⚖️", "headline": "Choose the right AI for your marketing stack?", "subline": "Semrush's AI-powered features use the best models for each task." },
+      "benchmarkCta": "See AI in marketing",
+      "footer": { "headline": "The best AI model depends on the task.", "subline": "Semrush uses AI across 55+ tools — see how the right model choice powers smarter marketing decisions." },
+      "seoLinks": []
+    },
+    "rag-cost-calculator": {
+      "partner": "semrush",
+      "postKpi": { "icon": "📚", "headline": "Build RAG-powered marketing tools?", "subline": "Semrush data feeds make excellent knowledge bases for RAG systems." },
+      "benchmarkCta": "Explore data APIs",
+      "footer": { "headline": "Power your RAG pipeline with marketing intelligence.", "subline": "Semrush provides structured marketing data that's ideal for RAG knowledge bases — competitive insights, keyword data, and more." },
+      "seoLinks": []
+    },
+    "ai-saas-margin-calculator": {
+      "partner": "semrush",
+      "postKpi": { "icon": "📊", "headline": "Market your AI SaaS product effectively?", "subline": "Semrush helps AI companies find and convert their target customers." },
+      "benchmarkCta": "Grow your AI SaaS",
+      "footer": { "headline": "Build margins. Then grow revenue.", "subline": "Semrush gives AI SaaS companies the marketing intelligence to acquire customers efficiently and scale profitably." },
+      "seoLinks": []
     }
   }
 }

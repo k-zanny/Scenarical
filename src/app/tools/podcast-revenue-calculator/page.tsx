@@ -1,17 +1,15 @@
 import { Metadata } from 'next';
-import { getToolBySlug } from '@/lib/tools-data';
 import { generateToolJsonLd } from '@/components/ToolPageWrapper';
-import ComingSoon from '@/components/ComingSoon';
-
-const tool = getToolBySlug('podcast-revenue-calculator');
+import PodcastRevenueCalculatorClient from './PodcastRevenueCalculatorClient';
 
 export const metadata: Metadata = {
-  title: `${tool?.name || 'podcast-revenue-calculator'} — Coming Soon | Scenarical`,
-  description: tool?.description || '',
+  title: 'Podcast Revenue Calculator — Free Sponsorship & Monetization Estimator | Scenarical',
+  description: 'Estimate podcast revenue from sponsorships and premium subscribers. Model CPM rates, fill rates, and production costs with real-time industry benchmarks.',
 };
 
-export default function Page() {
+export default function PodcastRevenueCalculatorPage() {
   const jsonLd = generateToolJsonLd('podcast-revenue-calculator');
+
   return (
     <>
       {jsonLd && (
@@ -20,7 +18,7 @@ export default function Page() {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       )}
-      <ComingSoon slug="podcast-revenue-calculator" />
+      <PodcastRevenueCalculatorClient />
     </>
   );
 }

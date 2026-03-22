@@ -1,17 +1,15 @@
 import { Metadata } from 'next';
-import { getToolBySlug } from '@/lib/tools-data';
 import { generateToolJsonLd } from '@/components/ToolPageWrapper';
-import ComingSoon from '@/components/ComingSoon';
-
-const tool = getToolBySlug('freelance-rate-calculator');
+import FreelanceRateCalculatorClient from './FreelanceRateCalculatorClient';
 
 export const metadata: Metadata = {
-  title: `${tool?.name || 'freelance-rate-calculator'} — Coming Soon | Scenarical`,
-  description: tool?.description || '',
+  title: 'Freelance Rate Calculator — Free Online Calculator | Scenarical',
+  description: 'Calculate your ideal freelance hourly rate, daily rate, and monthly revenue based on your income goals, expenses, and billable hours. Compare your rate to industry benchmarks in real time.',
 };
 
-export default function Page() {
+export default function FreelanceRateCalculatorPage() {
   const jsonLd = generateToolJsonLd('freelance-rate-calculator');
+
   return (
     <>
       {jsonLd && (
@@ -20,7 +18,7 @@ export default function Page() {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       )}
-      <ComingSoon slug="freelance-rate-calculator" />
+      <FreelanceRateCalculatorClient />
     </>
   );
 }

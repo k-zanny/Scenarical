@@ -1,17 +1,15 @@
 import { Metadata } from 'next';
-import { getToolBySlug } from '@/lib/tools-data';
 import { generateToolJsonLd } from '@/components/ToolPageWrapper';
-import ComingSoon from '@/components/ComingSoon';
-
-const tool = getToolBySlug('token-counter');
+import TokenCounterClient from './TokenCounterClient';
 
 export const metadata: Metadata = {
-  title: `${tool?.name || 'token-counter'} — Coming Soon | Scenarical`,
-  description: tool?.description || '',
+  title: 'Token Counter & Estimator — Estimate LLM Token Costs | Scenarical',
+  description: 'Estimate token counts from word counts, calculate input vs output token costs, and project daily and monthly LLM API spending across models.',
 };
 
-export default function Page() {
+export default function TokenCounterPage() {
   const jsonLd = generateToolJsonLd('token-counter');
+
   return (
     <>
       {jsonLd && (
@@ -20,7 +18,7 @@ export default function Page() {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       )}
-      <ComingSoon slug="token-counter" />
+      <TokenCounterClient />
     </>
   );
 }

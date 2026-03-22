@@ -1,17 +1,15 @@
 import { Metadata } from 'next';
-import { getToolBySlug } from '@/lib/tools-data';
 import { generateToolJsonLd } from '@/components/ToolPageWrapper';
-import ComingSoon from '@/components/ComingSoon';
-
-const tool = getToolBySlug('saas-pricing-calculator');
+import SaaSPricingCalculatorClient from './SaaSPricingCalculatorClient';
 
 export const metadata: Metadata = {
-  title: `${tool?.name || 'saas-pricing-calculator'} — Coming Soon | Scenarical`,
-  description: tool?.description || '',
+  title: 'SaaS Pricing Calculator — Free MRR, LTV & Churn Modeler | Scenarical',
+  description: 'Model your SaaS pricing, MRR growth, LTV:CAC ratio, and payback period. Simulate churn scenarios and benchmark against industry averages in real time.',
 };
 
-export default function Page() {
+export default function SaaSPricingCalculatorPage() {
   const jsonLd = generateToolJsonLd('saas-pricing-calculator');
+
   return (
     <>
       {jsonLd && (
@@ -20,7 +18,7 @@ export default function Page() {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       )}
-      <ComingSoon slug="saas-pricing-calculator" />
+      <SaaSPricingCalculatorClient />
     </>
   );
 }

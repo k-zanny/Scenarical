@@ -1,17 +1,15 @@
 import { Metadata } from 'next';
-import { getToolBySlug } from '@/lib/tools-data';
 import { generateToolJsonLd } from '@/components/ToolPageWrapper';
-import ComingSoon from '@/components/ComingSoon';
-
-const tool = getToolBySlug('influencer-pricing-calculator');
+import InfluencerPricingCalculatorClient from './InfluencerPricingCalculatorClient';
 
 export const metadata: Metadata = {
-  title: `${tool?.name || 'influencer-pricing-calculator'} — Coming Soon | Scenarical`,
-  description: tool?.description || '',
+  title: 'Influencer Pricing Calculator — Free Online Calculator | Scenarical',
+  description: 'Calculate influencer rates per post, campaign costs, and CPM based on followers, engagement rate, and platform. Compare pricing across follower tiers with real-time benchmarks.',
 };
 
-export default function Page() {
+export default function InfluencerPricingCalculatorPage() {
   const jsonLd = generateToolJsonLd('influencer-pricing-calculator');
+
   return (
     <>
       {jsonLd && (
@@ -20,7 +18,7 @@ export default function Page() {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       )}
-      <ComingSoon slug="influencer-pricing-calculator" />
+      <InfluencerPricingCalculatorClient />
     </>
   );
 }

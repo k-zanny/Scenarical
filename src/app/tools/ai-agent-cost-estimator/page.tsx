@@ -1,17 +1,15 @@
 import { Metadata } from 'next';
-import { getToolBySlug } from '@/lib/tools-data';
 import { generateToolJsonLd } from '@/components/ToolPageWrapper';
-import ComingSoon from '@/components/ComingSoon';
-
-const tool = getToolBySlug('ai-agent-cost-estimator');
+import AIAgentCostEstimatorClient from './AIAgentCostEstimatorClient';
 
 export const metadata: Metadata = {
-  title: `${tool?.name || 'ai-agent-cost-estimator'} — Coming Soon | Scenarical`,
-  description: tool?.description || '',
+  title: 'AI Agent Cost Estimator — Calculate Agent Infrastructure Costs | Scenarical',
+  description: 'Estimate the cost of running AI agents including LLM API calls, tool usage, and multi-step workflows. Model daily, monthly, and annual infrastructure spend.',
 };
 
-export default function Page() {
+export default function AIAgentCostEstimatorPage() {
   const jsonLd = generateToolJsonLd('ai-agent-cost-estimator');
+
   return (
     <>
       {jsonLd && (
@@ -20,7 +18,7 @@ export default function Page() {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       )}
-      <ComingSoon slug="ai-agent-cost-estimator" />
+      <AIAgentCostEstimatorClient />
     </>
   );
 }

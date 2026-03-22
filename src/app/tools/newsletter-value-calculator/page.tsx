@@ -1,17 +1,15 @@
 import { Metadata } from 'next';
-import { getToolBySlug } from '@/lib/tools-data';
 import { generateToolJsonLd } from '@/components/ToolPageWrapper';
-import ComingSoon from '@/components/ComingSoon';
-
-const tool = getToolBySlug('newsletter-value-calculator');
+import NewsletterValueCalculatorClient from './NewsletterValueCalculatorClient';
 
 export const metadata: Metadata = {
-  title: `${tool?.name || 'newsletter-value-calculator'} — Coming Soon | Scenarical`,
-  description: tool?.description || '',
+  title: 'Newsletter Subscriber Value Calculator — Free Online Calculator | Scenarical',
+  description: 'Calculate your newsletter subscriber lifetime value, monthly revenue, and LTV-to-CAC ratio. Model sponsorship and paid subscription revenue with real-time benchmarks.',
 };
 
-export default function Page() {
+export default function NewsletterValueCalculatorPage() {
   const jsonLd = generateToolJsonLd('newsletter-value-calculator');
+
   return (
     <>
       {jsonLd && (
@@ -20,7 +18,7 @@ export default function Page() {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       )}
-      <ComingSoon slug="newsletter-value-calculator" />
+      <NewsletterValueCalculatorClient />
     </>
   );
 }

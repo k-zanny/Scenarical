@@ -1,17 +1,15 @@
 import { Metadata } from 'next';
-import { getToolBySlug } from '@/lib/tools-data';
 import { generateToolJsonLd } from '@/components/ToolPageWrapper';
-import ComingSoon from '@/components/ComingSoon';
-
-const tool = getToolBySlug('da-impact-calculator');
+import DAImpactCalculatorClient from './DAImpactCalculatorClient';
 
 export const metadata: Metadata = {
-  title: `${tool?.name || 'da-impact-calculator'} — Coming Soon | Scenarical`,
-  description: tool?.description || '',
+  title: 'Domain Authority Impact Calculator — Free Online Calculator | Scenarical',
+  description: 'Estimate how domain authority improvements impact your organic traffic and ROI. Model link-building investment, DA growth timelines, and traffic projections.',
 };
 
-export default function Page() {
+export default function DAImpactCalculatorPage() {
   const jsonLd = generateToolJsonLd('da-impact-calculator');
+
   return (
     <>
       {jsonLd && (
@@ -20,7 +18,7 @@ export default function Page() {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       )}
-      <ComingSoon slug="da-impact-calculator" />
+      <DAImpactCalculatorClient />
     </>
   );
 }

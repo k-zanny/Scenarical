@@ -1,17 +1,15 @@
 import { Metadata } from 'next';
-import { getToolBySlug } from '@/lib/tools-data';
 import { generateToolJsonLd } from '@/components/ToolPageWrapper';
-import ComingSoon from '@/components/ComingSoon';
-
-const tool = getToolBySlug('traffic-value-calculator');
+import TrafficValueCalculatorClient from './TrafficValueCalculatorClient';
 
 export const metadata: Metadata = {
-  title: `${tool?.name || 'traffic-value-calculator'} — Coming Soon | Scenarical`,
-  description: tool?.description || '',
+  title: 'Blog Traffic Value Calculator — Free Online Calculator | Scenarical',
+  description: 'Calculate the ad-equivalent value of your organic traffic, monthly organic revenue, and annual savings versus paid acquisition. Compare organic vs paid with real-time benchmarks.',
 };
 
-export default function Page() {
+export default function TrafficValueCalculatorPage() {
   const jsonLd = generateToolJsonLd('traffic-value-calculator');
+
   return (
     <>
       {jsonLd && (
@@ -20,7 +18,7 @@ export default function Page() {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       )}
-      <ComingSoon slug="traffic-value-calculator" />
+      <TrafficValueCalculatorClient />
     </>
   );
 }

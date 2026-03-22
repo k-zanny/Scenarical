@@ -1,17 +1,15 @@
 import { Metadata } from 'next';
-import { getToolBySlug } from '@/lib/tools-data';
 import { generateToolJsonLd } from '@/components/ToolPageWrapper';
-import ComingSoon from '@/components/ComingSoon';
-
-const tool = getToolBySlug('seo-roi-calculator');
+import SEOROICalculatorClient from './SEOROICalculatorClient';
 
 export const metadata: Metadata = {
-  title: `${tool?.name || 'seo-roi-calculator'} — Coming Soon | Scenarical`,
-  description: tool?.description || '',
+  title: 'SEO ROI Calculator — Free Online Calculator | Scenarical',
+  description: 'Calculate your SEO return on investment over 12 months. Model traffic growth, organic conversions, and break-even timelines with real-time benchmarks.',
 };
 
-export default function Page() {
+export default function SEOROICalculatorPage() {
   const jsonLd = generateToolJsonLd('seo-roi-calculator');
+
   return (
     <>
       {jsonLd && (
@@ -20,7 +18,7 @@ export default function Page() {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       )}
-      <ComingSoon slug="seo-roi-calculator" />
+      <SEOROICalculatorClient />
     </>
   );
 }
