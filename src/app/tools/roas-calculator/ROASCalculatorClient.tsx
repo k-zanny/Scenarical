@@ -267,17 +267,7 @@ export default function ROASCalculatorClient() {
         },
       },
       annotation: {
-        annotations: {
-          breakEvenLabel: {
-            type: 'label' as const,
-            xValue: formatCurrency(spendLevels[1], 0),
-            yValue: spendLevels[1] * m.breakEvenRoas,
-            content: [`B/E ${m.breakEvenRoas.toFixed(1)}x`],
-            color: '#F59E0B',
-            font: { size: 10, weight: 'bold' as const },
-            position: { x: 'start' as const, y: 'end' as const },
-          },
-        },
+        annotations: {},
       },
     },
     scales: {
