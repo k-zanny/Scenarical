@@ -22,6 +22,9 @@ import FAQSection from '@/components/FAQSection';
 import FeedbackWidget from '@/components/FeedbackWidget';
 import { formatCurrency, saveToLocalStorage, loadFromLocalStorage } from '@/lib/utils';
 import benchmarks from '@/data/benchmarks.json';
+import PostKPICTA from '@/components/PostKPICTA';
+import PreRelatedCTA from '@/components/PreRelatedCTA';
+import affiliateData from '@/data/affiliate-links.json';
 
 ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
 
@@ -261,8 +264,8 @@ export default function EmailROICalculatorClient() {
           {
             icon: '🧹',
             text: 'Clean your list — remove inactive subscribers dragging down open and click rates.',
-            affiliateText: 'Verify your list with ZeroBounce → Try free',
-            affiliateUrl: '#zerobounce-affiliate',
+            affiliateText: 'Grow your list with Beehiiv → Start free',
+            affiliateUrl: affiliateData.partners.beehiiv.url,
           },
           { icon: '✍️', text: 'Rewrite subject lines and preview text to boost open rates above the 21% benchmark.' },
           { icon: '💰', text: 'Evaluate your email platform cost — consider switching to a more cost-effective provider.' },
@@ -279,8 +282,8 @@ export default function EmailROICalculatorClient() {
             icon: '🛒',
             text: 'Add abandoned cart and post-purchase email automations to capture more revenue.',
             link: '/tools/roas-calculator',
-            affiliateText: 'Automate flows with Klaviyo → Try free',
-            affiliateUrl: '#klaviyo-affiliate',
+            affiliateText: 'Automate flows with Beehiiv → Start free',
+            affiliateUrl: affiliateData.partners.beehiiv.url,
           },
           { icon: '📊', text: 'A/B test email content, CTAs, and send times to optimize click-through rates.', link: '/tools/ab-test-calculator' },
         ],
@@ -295,8 +298,8 @@ export default function EmailROICalculatorClient() {
           {
             icon: '🔄',
             text: 'Build advanced automation flows (welcome series, win-back, VIP tiers) to increase revenue per subscriber.',
-            affiliateText: 'Build automations with Klaviyo → Try free',
-            affiliateUrl: '#klaviyo-affiliate',
+            affiliateText: 'Build automations with Beehiiv → Start free',
+            affiliateUrl: affiliateData.partners.beehiiv.url,
           },
           { icon: '🧪', text: 'Test personalization — dynamic content and product recommendations can lift conversion rates significantly.', link: '/tools/ab-test-calculator' },
         ],
@@ -309,8 +312,8 @@ export default function EmailROICalculatorClient() {
         {
           icon: '🚀',
           text: 'Aggressively grow your list — every new subscriber is highly valuable at this ROI level.',
-          affiliateText: 'Grow your list with OptinMonster → Try free',
-          affiliateUrl: '#optinmonster-affiliate',
+          affiliateText: 'Scale your newsletter with Beehiiv → Start free',
+          affiliateUrl: affiliateData.partners.beehiiv.url,
         },
         { icon: '🌐', text: 'Expand to SMS and push notifications to capture revenue from additional channels.' },
         { icon: '📧', text: 'Increase email frequency — test sending more campaigns to capture incremental revenue.' },
@@ -534,6 +537,8 @@ export default function EmailROICalculatorClient() {
             </div>
           )}
 
+          <PostKPICTA toolSlug="email-roi-calculator" />
+
           {/* Chart — bigger height */}
           <div className="bg-surface rounded-xl border border-surface-lighter p-5 mb-6">
             <h3 className="text-sm font-medium text-label mb-3">Email Revenue Funnel</h3>
@@ -549,6 +554,8 @@ export default function EmailROICalculatorClient() {
             min={0}
             max={7200}
             suffix="%"
+            affiliateUrl={affiliateData.partners.beehiiv.url}
+            affiliateText="Boost your email performance"
           />
 
           <div className="mt-4">
@@ -559,6 +566,8 @@ export default function EmailROICalculatorClient() {
               min={0}
               max={80}
               suffix="%"
+              affiliateUrl={affiliateData.partners.beehiiv.url}
+              affiliateText="Boost your email performance"
             />
           </div>
 
@@ -677,7 +686,7 @@ export default function EmailROICalculatorClient() {
             per subscriber per month. If your revenue per subscriber is significantly below this, it
             usually indicates issues with engagement (too many inactive subscribers), relevance (poor
             segmentation), or offer strength (weak calls to action or low-value products). Use the
-            benchmark gauges in this calculator to see exactly where you stand.
+            benchmark gauges in this calculator to see exactly where you stand. To monitor your email performance against these benchmarks, <a href={affiliateData.partners.beehiiv.url} target="_blank" rel="sponsored noopener" className="text-accent hover:underline">platforms like Beehiiv provide built-in analytics to track and optimize these metrics in real time</a>.
           </p>
           <h3 className="text-lg font-semibold text-foreground mt-6 mb-2">How to Improve Your Email ROI</h3>
           <p>
@@ -686,7 +695,7 @@ export default function EmailROICalculatorClient() {
             downstream metric. Second, segmentation and personalization: sending the right message to
             the right subscriber at the right time dramatically increases click and conversion rates.
             Third, automation: triggered email flows (welcome series, abandoned cart, re-engagement)
-            generate revenue continuously without manual effort, compounding your returns over time.
+            generate revenue continuously without manual effort, compounding your returns over time. For a platform purpose-built for newsletter monetization, <a href={affiliateData.partners.beehiiv.url} target="_blank" rel="sponsored noopener" className="text-accent hover:underline">try Beehiiv&apos;s newsletter growth tools to scale your list and revenue</a>.
           </p>
           <p>
             Use the Risk Radar above to identify which input variable has the greatest impact on your
@@ -702,6 +711,7 @@ export default function EmailROICalculatorClient() {
       <FAQSection faqs={faqs} />
 
       <FeedbackWidget toolSlug="email-roi-calculator" />
+      <PreRelatedCTA toolSlug="email-roi-calculator" />
       {/* Related Tools */}
       <RelatedTools currentSlug="email-roi-calculator" />
     </div>

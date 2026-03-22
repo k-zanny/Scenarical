@@ -62,21 +62,26 @@ export default function ActionPanel({ status, title, actions }: ActionPanelProps
             <span className="text-base mt-0.5">{action.icon}</span>
             <div className="flex-1">
               <p className="text-sm text-foreground">{action.text}</p>
-              {action.link && (
-                <Link href={action.link} className="text-xs text-accent hover:underline mt-1 inline-block">
-                  Open related tool →
-                </Link>
-              )}
-              {action.affiliateText && (
-                <a
-                  href={action.affiliateUrl || '#'}
-                  className="text-xs text-success hover:underline mt-1 inline-block ml-3"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {action.affiliateText} →
-                </a>
-              )}
+              <div className="flex flex-wrap items-center gap-2 mt-2">
+                {action.link && (
+                  <Link
+                    href={action.link}
+                    className="inline-block text-xs px-3 py-1.5 rounded border border-[#3B4A60] text-[#94A3B8] hover:text-white hover:border-[#5B6A80] transition-colors"
+                  >
+                    Open related tool →
+                  </Link>
+                )}
+                {action.affiliateText && (
+                  <a
+                    href={action.affiliateUrl || '#'}
+                    className="inline-block bg-[#3B82F6] text-white text-xs font-semibold px-3 py-1.5 rounded hover:bg-[#2563EB] transition-colors"
+                    target="_blank"
+                    rel="sponsored noopener"
+                  >
+                    {action.affiliateText}
+                  </a>
+                )}
+              </div>
             </div>
           </div>
         ))}

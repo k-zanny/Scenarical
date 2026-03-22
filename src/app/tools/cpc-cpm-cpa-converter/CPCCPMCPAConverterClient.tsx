@@ -20,6 +20,9 @@ import ShareButton from '@/components/ShareButton';
 import RelatedTools from '@/components/RelatedTools';
 import FAQSection from '@/components/FAQSection';
 import FeedbackWidget from '@/components/FeedbackWidget';
+import PostKPICTA from '@/components/PostKPICTA';
+import PreRelatedCTA from '@/components/PreRelatedCTA';
+import affiliateData from '@/data/affiliate-links.json';
 import { formatCurrency, formatPercent, saveToLocalStorage, loadFromLocalStorage } from '@/lib/utils';
 import benchmarks from '@/data/benchmarks.json';
 
@@ -276,13 +279,13 @@ export default function CPCCPMCPAConverterClient() {
             text: 'Improve landing page conversion rate to get more conversions from existing clicks.',
             link: '/tools/landing-page-estimator',
             affiliateText: 'Optimize landing pages with Unbounce → Try free',
-            affiliateUrl: '#unbounce-affiliate',
+            affiliateUrl: affiliateData.partners.unbounce.url,
           },
           {
             icon: '🔧',
             text: 'Lower CPC by improving ad quality score and refining keyword targeting.',
             affiliateText: 'Analyze competitor CPC with Semrush → Try free',
-            affiliateUrl: '#semrush-affiliate',
+            affiliateUrl: affiliateData.partners.semrush.url,
           },
           { icon: '⏸️', text: 'Pause broad-match keywords and low-performing ad groups to reduce wasted spend.' },
         ],
@@ -298,7 +301,7 @@ export default function CPCCPMCPAConverterClient() {
             text: 'Test different ad creatives to improve CTR and lower effective CPC.',
             link: '/tools/ab-test-calculator',
             affiliateText: 'Track ad performance with Semrush → Try free',
-            affiliateUrl: '#semrush-affiliate',
+            affiliateUrl: affiliateData.partners.semrush.url,
           },
           {
             icon: '🎯',
@@ -318,7 +321,7 @@ export default function CPCCPMCPAConverterClient() {
             text: 'Consider scaling budget while monitoring CPA for diminishing returns.',
             link: '/tools/ad-budget-planner',
             affiliateText: 'Plan scaling strategy with Semrush → Try free',
-            affiliateUrl: '#semrush-affiliate',
+            affiliateUrl: affiliateData.partners.semrush.url,
           },
           {
             icon: '🧪',
@@ -337,7 +340,7 @@ export default function CPCCPMCPAConverterClient() {
           text: 'Scale aggressively — increase budget and expand to new channels.',
           link: '/tools/ad-budget-planner',
           affiliateText: 'Find new channels with Semrush → Try free',
-          affiliateUrl: '#semrush-affiliate',
+          affiliateUrl: affiliateData.partners.semrush.url,
         },
         { icon: '🌐', text: 'Test new platforms to diversify traffic while maintaining low CPA.' },
         {
@@ -562,6 +565,8 @@ export default function CPCCPMCPAConverterClient() {
             </div>
           )}
 
+          <PostKPICTA toolSlug="cpc-cpm-cpa-converter" />
+
           {/* Chart */}
           <div className="bg-surface rounded-xl border border-surface-lighter p-5 mb-6">
             <h3 className="text-sm font-medium text-label mb-3">Your Costs vs. Platform Averages</h3>
@@ -577,6 +582,8 @@ export default function CPCCPMCPAConverterClient() {
             min={0}
             max={10}
             suffix="$"
+            affiliateUrl={affiliateData.partners.semrush.url}
+            affiliateText="Analyze competitor CPC"
           />
 
           <div className="flex gap-3 mt-4">
@@ -703,7 +710,7 @@ export default function CPCCPMCPAConverterClient() {
             The bar chart above compares your actual metrics against all five major platforms. This comparison
             helps you understand whether your costs are competitive and whether you might benefit from testing
             different channels. If your CPC on Google is well above average, it might be worth testing Facebook
-            or TikTok where click costs are typically lower.
+            or TikTok where click costs are typically lower. For a deeper look at how your costs compare, <a href={affiliateData.partners.semrush.url} target="_blank" rel="sponsored noopener" className="text-accent hover:underline">Semrush&apos;s competitive analysis tools let you compare your ad costs against any competitor in real time</a>.
           </p>
 
           <h3 className="text-lg font-semibold text-foreground mt-6 mb-2">Optimizing Your Ad Costs</h3>
@@ -716,7 +723,7 @@ export default function CPCCPMCPAConverterClient() {
           </p>
           <p>
             Use the Risk Radar below your results to see which input variable has the biggest impact on your
-            bottom line. This tells you exactly where to focus your optimization efforts for maximum return.
+            bottom line. This tells you exactly where to focus your optimization efforts for maximum return. To identify which keywords are driving up your CPC and find cheaper alternatives, <a href={affiliateData.partners.semrush.url} target="_blank" rel="sponsored noopener" className="text-accent hover:underline">try Semrush&apos;s keyword and ad research tools</a>.
             The reverse goal mode (click the CPA card) shows you multiple paths to reach your target CPA,
             ranked by the smallest change required.
           </p>
@@ -727,6 +734,7 @@ export default function CPCCPMCPAConverterClient() {
       <FAQSection faqs={faqs} />
 
       <FeedbackWidget toolSlug="cpc-cpm-cpa-converter" />
+      <PreRelatedCTA toolSlug="cpc-cpm-cpa-converter" />
       {/* Related Tools */}
       <RelatedTools currentSlug="cpc-cpm-cpa-converter" />
     </div>

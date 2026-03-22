@@ -24,6 +24,9 @@ import FAQSection from '@/components/FAQSection';
 import FeedbackWidget from '@/components/FeedbackWidget';
 import { formatCurrency, saveToLocalStorage, loadFromLocalStorage } from '@/lib/utils';
 import benchmarks from '@/data/benchmarks.json';
+import PostKPICTA from '@/components/PostKPICTA';
+import PreRelatedCTA from '@/components/PreRelatedCTA';
+import affiliateData from '@/data/affiliate-links.json';
 
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend, Filler);
 
@@ -340,14 +343,14 @@ export default function ContentROICalculatorClient() {
           {
             icon: '✍️',
             text: 'Reduce per-article costs by using a mix of in-house writing and freelancers, or repurpose existing content.',
-            affiliateText: 'Scale content affordably with Jasper → Try free',
-            affiliateUrl: '#jasper-affiliate',
+            affiliateText: 'Optimize content with SurferSEO → Try free',
+            affiliateUrl: affiliateData.partners.surferseo.url,
           },
           {
             icon: '🔍',
             text: 'Improve SEO targeting — focus on long-tail keywords with lower competition and higher purchase intent.',
-            affiliateText: 'Find winning keywords with Semrush → Try free',
-            affiliateUrl: '#semrush-affiliate',
+            affiliateText: 'Find winning keywords with SurferSEO → Try free',
+            affiliateUrl: affiliateData.partners.surferseo.url,
           },
           { icon: '📊', text: 'Add stronger CTAs and lead magnets to increase conversion rate on existing content.', link: '/tools/ab-test-calculator' },
         ],
@@ -361,8 +364,8 @@ export default function ContentROICalculatorClient() {
           {
             icon: '📈',
             text: 'Focus on content compounding — increase publishing frequency to build your library faster.',
-            affiliateText: 'Plan your content calendar with Semrush → Try free',
-            affiliateUrl: '#semrush-affiliate',
+            affiliateText: 'Plan your content with SurferSEO → Try free',
+            affiliateUrl: affiliateData.partners.surferseo.url,
           },
           { icon: '🎯', text: 'Target higher-value keywords that attract visitors with stronger purchase intent.' },
           { icon: '🔄', text: 'Update and refresh existing content to boost traffic without additional creation costs.' },
@@ -379,8 +382,8 @@ export default function ContentROICalculatorClient() {
             icon: '📧',
             text: 'Build email capture flows on top-performing content to increase lead value.',
             link: '/tools/email-roi-calculator',
-            affiliateText: 'Automate email flows with Mailchimp → Try free',
-            affiliateUrl: '#mailchimp-affiliate',
+            affiliateText: 'Optimize content for SEO with SurferSEO → Try free',
+            affiliateUrl: affiliateData.partners.surferseo.url,
           },
           { icon: '🧪', text: 'A/B test landing pages and CTAs on your highest-traffic articles to maximize conversions.', link: '/tools/ab-test-calculator' },
         ],
@@ -393,8 +396,8 @@ export default function ContentROICalculatorClient() {
         {
           icon: '💰',
           text: 'Aggressively scale production — double down on the content formats and topics driving the best results.',
-          affiliateText: 'Scale content production with Jasper → Try free',
-          affiliateUrl: '#jasper-affiliate',
+          affiliateText: 'Scale content with SurferSEO → Try free',
+          affiliateUrl: affiliateData.partners.surferseo.url,
         },
         { icon: '🌐', text: 'Repurpose top content into video, podcasts, and social media to capture additional channels.' },
         { icon: '📊', text: 'Use the compounding advantage to negotiate better rates with writers by offering volume commitments.' },
@@ -618,6 +621,8 @@ export default function ContentROICalculatorClient() {
             </div>
           )}
 
+          <PostKPICTA toolSlug="content-roi-calculator" />
+
           {/* Chart — bigger */}
           <div className="bg-surface rounded-xl border border-surface-lighter p-5 mb-6">
             <h3 className="text-sm font-medium text-label mb-3">12-Month Cumulative ROI</h3>
@@ -633,6 +638,8 @@ export default function ContentROICalculatorClient() {
             min={0}
             max={10}
             suffix="x"
+            affiliateUrl={affiliateData.partners.surferseo.url}
+            affiliateText="Optimize your content SEO"
           />
 
           <div className="flex gap-3 mt-4">
@@ -754,7 +761,7 @@ export default function ContentROICalculatorClient() {
             value generated for every $1 spent. However, this average is heavily influenced by the
             compounding timeline. Programs in their first six months often show negative or low ROI,
             while mature programs (12+ months) frequently exceed 5-10x. This is why consistency and
-            patience are the most underrated factors in content marketing success.
+            patience are the most underrated factors in content marketing success. To ensure your content is optimized for search from the start, <a href={affiliateData.partners.surferseo.url} target="_blank" rel="sponsored noopener" className="text-accent hover:underline">SurferSEO&apos;s content editor scores your articles against top-ranking competitors in real time</a>.
           </p>
           <h3 className="text-lg font-semibold text-foreground mt-6 mb-2">Maximizing Your Content ROI</h3>
           <p>
@@ -773,7 +780,7 @@ export default function ContentROICalculatorClient() {
             optimization and keyword research. If conversion rate dominates, invest in better lead
             magnets and CTA placement. The reverse goal mode lets you work backward from a lead target
             to see exactly what combination of articles, traffic, and conversion rates will get you
-            there.
+            there. For data-driven content planning that maximizes organic traffic, <a href={affiliateData.partners.surferseo.url} target="_blank" rel="sponsored noopener" className="text-accent hover:underline">try SurferSEO&apos;s keyword research and content optimization tools</a>.
           </p>
         </div>
       </div>
@@ -782,6 +789,7 @@ export default function ContentROICalculatorClient() {
       <FAQSection faqs={faqs} />
 
       <FeedbackWidget toolSlug="content-roi-calculator" />
+      <PreRelatedCTA toolSlug="content-roi-calculator" />
       {/* Related Tools */}
       <RelatedTools currentSlug="content-roi-calculator" />
     </div>

@@ -24,6 +24,9 @@ import FAQSection from '@/components/FAQSection';
 import FeedbackWidget from '@/components/FeedbackWidget';
 import { formatNumber, saveToLocalStorage, loadFromLocalStorage } from '@/lib/utils';
 import benchmarks from '@/data/benchmarks.json';
+import PostKPICTA from '@/components/PostKPICTA';
+import PreRelatedCTA from '@/components/PreRelatedCTA';
+import affiliateData from '@/data/affiliate-links.json';
 
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend, Filler);
 
@@ -331,7 +334,7 @@ export default function ABTestCalculatorClient() {
             text: 'Drive more traffic — use paid ads or email campaigns to boost daily visitors.',
             link: '/tools/ad-budget-planner',
             affiliateText: 'Boost traffic with Semrush → Try free',
-            affiliateUrl: '#semrush-affiliate',
+            affiliateUrl: affiliateData.partners.semrush.url,
           },
           { icon: '🎯', text: 'Focus on pages with higher traffic volume for faster results.' },
         ],
@@ -349,7 +352,7 @@ export default function ABTestCalculatorClient() {
             text: 'Use email campaigns to increase traffic during the test period.',
             link: '/tools/email-roi-calculator',
             affiliateText: 'Analyze traffic sources with Semrush → Try free',
-            affiliateUrl: '#semrush-affiliate',
+            affiliateUrl: affiliateData.partners.semrush.url,
           },
         ],
       };
@@ -365,7 +368,7 @@ export default function ABTestCalculatorClient() {
             icon: '📊',
             text: 'Use this calculator to find the sweet spot between speed and precision.',
             affiliateText: 'Track experiment results with Semrush → Try free',
-            affiliateUrl: '#semrush-affiliate',
+            affiliateUrl: affiliateData.partners.semrush.url,
           },
         ],
       };
@@ -381,7 +384,7 @@ export default function ABTestCalculatorClient() {
             text: 'Run multiple sequential tests to optimize faster.',
             link: '/tools/landing-page-estimator',
             affiliateText: 'Find winning pages with Semrush → Try free',
-            affiliateUrl: '#semrush-affiliate',
+            affiliateUrl: affiliateData.partners.semrush.url,
           },
           { icon: '📊', text: 'Track your ROAS to ensure test winners actually improve revenue.', link: '/tools/roas-calculator' },
         ],
@@ -397,7 +400,7 @@ export default function ABTestCalculatorClient() {
           icon: '🎯',
           text: 'Ensure your traffic split is truly 50/50 for accurate results.',
           affiliateText: 'Monitor traffic quality with Semrush → Try free',
-          affiliateUrl: '#semrush-affiliate',
+          affiliateUrl: affiliateData.partners.semrush.url,
         },
       ],
     };
@@ -609,6 +612,8 @@ export default function ABTestCalculatorClient() {
             </div>
           )}
 
+          <PostKPICTA toolSlug="ab-test-calculator" />
+
           {/* Chart — bigger height */}
           <div className="bg-surface rounded-xl border border-surface-lighter p-5 mb-6">
             <h3 className="text-sm font-medium text-label mb-3">Statistical Power Curve</h3>
@@ -624,6 +629,8 @@ export default function ABTestCalculatorClient() {
             min={0}
             max={15}
             suffix="%"
+            affiliateUrl={affiliateData.partners.semrush.url}
+            affiliateText="Drive more test traffic"
           />
 
           <div className="flex gap-3 mt-4">
@@ -755,7 +762,7 @@ export default function ABTestCalculatorClient() {
             The key question is: what is the smallest improvement worth acting on? If a 5% lift
             would generate $50,000 in annual revenue, it is worth the patience. If it would generate
             $500, use a larger MDE and run shorter tests. This calculator shows you the exact
-            trade-off so you can make an informed decision.
+            trade-off so you can make an informed decision. To find pages with the highest traffic potential, <a href={affiliateData.partners.semrush.url} target="_blank" rel="sponsored noopener" className="text-accent hover:underline">Semrush&apos;s traffic analytics can help you identify which pages have enough volume for rapid testing</a>.
           </p>
 
           <h3 className="text-lg font-semibold text-foreground mt-6 mb-2">
@@ -789,7 +796,7 @@ export default function ABTestCalculatorClient() {
             If the test duration is too long, use the interactive sliders to explore trade-offs.
             The Risk Radar shows which variable has the biggest impact on test duration, helping you
             focus your attention. Click &quot;Days to Complete&quot; to enter reverse-goal mode, where you set
-            a target duration and the calculator tells you the daily traffic needed to meet it.
+            a target duration and the calculator tells you the daily traffic needed to meet it. If your current traffic is too low for fast experiments, <a href={affiliateData.partners.semrush.url} target="_blank" rel="sponsored noopener" className="text-accent hover:underline">try Semrush&apos;s organic research tools to find high-traffic opportunities</a>.
           </p>
 
           <h3 className="text-lg font-semibold text-foreground mt-6 mb-2">
@@ -816,6 +823,7 @@ export default function ABTestCalculatorClient() {
 
       <FeedbackWidget toolSlug="ab-test-calculator" />
       {/* Related Tools */}
+      <PreRelatedCTA toolSlug="ab-test-calculator" />
       <RelatedTools currentSlug="ab-test-calculator" />
     </div>
   );

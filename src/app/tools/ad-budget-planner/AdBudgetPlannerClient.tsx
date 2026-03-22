@@ -28,6 +28,9 @@ import {
   loadFromLocalStorage,
 } from '@/lib/utils';
 import benchmarks from '@/data/benchmarks.json';
+import PostKPICTA from '@/components/PostKPICTA';
+import PreRelatedCTA from '@/components/PreRelatedCTA';
+import affiliateData from '@/data/affiliate-links.json';
 
 ChartJS.register(ArcElement, CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
 
@@ -280,7 +283,7 @@ export default function AdBudgetPlannerClient() {
         icon: '🔄',
         text: 'Your blended ROAS is below the 2.0x industry average. Consider shifting budget toward higher-performing channels like Facebook Ads (avg 2.5x ROAS) or reducing spend on underperformers.',
         affiliateText: 'Analyze competitor ad strategy with Semrush → Try free',
-        affiliateUrl: '#semrush-affiliate',
+        affiliateUrl: affiliateData.partners.semrush.url,
       });
     }
 
@@ -311,7 +314,7 @@ export default function AdBudgetPlannerClient() {
         icon: '💰',
         text: `Projected profit of ${formatCurrency(totalProfit)}. Consider reinvesting a portion into scaling your top channel to compound gains.`,
         affiliateText: 'Scale with data-driven insights from Semrush → Try free',
-        affiliateUrl: '#semrush-affiliate',
+        affiliateUrl: affiliateData.partners.semrush.url,
       });
     }
 
@@ -665,6 +668,8 @@ export default function AdBudgetPlannerClient() {
             </div>
           )}
 
+          <PostKPICTA toolSlug="ad-budget-planner" />
+
           {/* Charts */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
             <div className="bg-surface rounded-xl border border-surface-lighter p-5">
@@ -756,6 +761,8 @@ export default function AdBudgetPlannerClient() {
               min={0}
               max={6}
               suffix="x"
+              affiliateUrl={affiliateData.partners.semrush.url}
+              affiliateText="See competitor ad budgets"
             />
           </div>
 
@@ -874,7 +881,7 @@ export default function AdBudgetPlannerClient() {
                 budget there. Use the remaining 30-40% to test secondary channels. As you gather
                 performance data, shift budget toward the channels that deliver the best return. This
                 planner lets you model these shifts instantly so you can see projected outcomes
-                before making changes in your ad accounts.
+                before making changes in your ad accounts. For data-driven budget planning, <a href={affiliateData.partners.semrush.url} target="_blank" rel="sponsored noopener" className="text-accent hover:underline">Semrush&apos;s advertising research reveals exactly where competitors allocate their budgets</a>.
               </p>
               <p>
                 Budget planning also requires understanding minimum effective spend. Most ad
@@ -890,7 +897,7 @@ export default function AdBudgetPlannerClient() {
                 sensitive your projected profit is to changes in each variable. If a 15% decrease in
                 your total budget causes a disproportionate drop in profit, your margins are thin and
                 you may be over-leveraged on advertising. Conversely, if adjusting a single channel
-                allocation barely moves the needle, that channel may not warrant its current spend.
+                allocation barely moves the needle, that channel may not warrant its current spend. To validate your allocation strategy, <a href={affiliateData.partners.semrush.url} target="_blank" rel="sponsored noopener" className="text-accent hover:underline">try Semrush&apos;s competitive analysis to benchmark your spend against industry leaders</a>.
               </p>
               <p>
                 For advanced planning, use the reverse goal feature. Enter your target monthly
@@ -909,6 +916,7 @@ export default function AdBudgetPlannerClient() {
 
       <FeedbackWidget toolSlug="ad-budget-planner" />
       {/* Related Tools */}
+      <PreRelatedCTA toolSlug="ad-budget-planner" />
       <RelatedTools currentSlug={SLUG} />
     </div>
   );

@@ -1,44 +1,205 @@
 {
-  "roas-calculator": {
-    "tool": "Semrush",
-    "cta": "Track & optimize your ROAS with Semrush",
-    "url": "#semrush-affiliate",
-    "trial": "Try free for 7 days"
+  "partners": {
+    "semrush": {
+      "url": "https://www.semrush.com/?ref=scenarical",
+      "label": "Semrush",
+      "tagline": "Try Free →",
+      "socialProof": "4.8★ by 10M+ marketers"
+    },
+    "beehiiv": {
+      "url": "https://www.beehiiv.com/?ref=scenarical",
+      "label": "Beehiiv",
+      "tagline": "Start Free →",
+      "socialProof": "Powering 100,000+ newsletters"
+    },
+    "surferseo": {
+      "url": "https://surferseo.com/?ref=scenarical",
+      "label": "SurferSEO",
+      "tagline": "Try Free →",
+      "socialProof": "Trusted by 150,000+ content creators"
+    },
+    "unbounce": {
+      "url": "https://unbounce.com/?ref=scenarical",
+      "label": "Unbounce",
+      "tagline": "Try Free →",
+      "socialProof": "15,000+ brands, 1.5B+ conversions"
+    }
   },
-  "cpc-cpm-cpa-converter": {
-    "tool": "Google Ads",
-    "cta": "Manage your ad campaigns smarter with Google Ads Editor",
-    "url": "#google-ads-affiliate",
-    "trial": "Start free"
-  },
-  "ab-test-calculator": {
-    "tool": "VWO",
-    "cta": "Run professional A/B tests with VWO",
-    "url": "#vwo-affiliate",
-    "trial": "Start free trial"
-  },
-  "email-roi-calculator": {
-    "tool": "Beehiiv",
-    "cta": "Grow your newsletter revenue with Beehiiv",
-    "url": "#beehiiv-affiliate",
-    "trial": "Start free"
-  },
-  "content-roi-calculator": {
-    "tool": "Surfer SEO",
-    "cta": "Optimize your content ROI with Surfer SEO",
-    "url": "#surfer-affiliate",
-    "trial": "Try free"
-  },
-  "ad-budget-planner": {
-    "tool": "Semrush",
-    "cta": "Plan & allocate your ad budget with Semrush",
-    "url": "#semrush-affiliate",
-    "trial": "Try free for 7 days"
-  },
-  "landing-page-estimator": {
-    "tool": "Unbounce",
-    "cta": "Build high-converting landing pages with Unbounce",
-    "url": "#unbounce-affiliate",
-    "trial": "Start free trial"
+  "tools": {
+    "roas-calculator": {
+      "partner": "semrush",
+      "postKpi": {
+        "icon": "📊",
+        "headline": "Want to track your ROAS in real time?",
+        "subline": "Semrush monitors your ad performance across all channels."
+      },
+      "benchmarkCta": "Analyze your competitors",
+      "footer": {
+        "headline": "Ready to put these numbers into action?",
+        "subline": "Semrush gives you the competitive data to optimize your ROAS, lower your CPC, and outperform your competitors."
+      },
+      "seoLinks": [
+        {
+          "section": "Industry Benchmarks",
+          "anchorText": "Semrush provides real-time ROAS tracking across all your ad channels",
+          "context": "To see how your specific campaigns compare, "
+        },
+        {
+          "section": "How to Use This ROAS Calculator",
+          "anchorText": "try Semrush's free competitive analysis",
+          "context": "For deeper analysis of your competitors' ad spend and keywords, "
+        }
+      ]
+    },
+    "cpc-cpm-cpa-converter": {
+      "partner": "semrush",
+      "postKpi": {
+        "icon": "💰",
+        "headline": "Compare your CPC against competitors?",
+        "subline": "Semrush shows competitor ad spend and keywords."
+      },
+      "benchmarkCta": "Analyze competitor CPC",
+      "footer": {
+        "headline": "Ready to put these numbers into action?",
+        "subline": "Semrush reveals your competitors' exact ad spend, keywords, and cost metrics so you can outperform them."
+      },
+      "seoLinks": [
+        {
+          "section": "Platform Benchmarks",
+          "anchorText": "Semrush's competitive analysis tools let you compare your ad costs against any competitor in real time",
+          "context": "For a deeper look at how your costs compare, "
+        },
+        {
+          "section": "Optimizing Your Ad Costs",
+          "anchorText": "try Semrush's keyword and ad research tools",
+          "context": "To identify which keywords are driving up your CPC and find cheaper alternatives, "
+        }
+      ]
+    },
+    "ab-test-calculator": {
+      "partner": "semrush",
+      "postKpi": {
+        "icon": "🧪",
+        "headline": "Need more traffic for your test?",
+        "subline": "Semrush finds high-volume keywords to drive targeted visitors."
+      },
+      "benchmarkCta": "Drive more test traffic",
+      "footer": {
+        "headline": "Ready to put these numbers into action?",
+        "subline": "Semrush helps you find high-volume keywords and traffic sources to power your experiments faster."
+      },
+      "seoLinks": [
+        {
+          "section": "Choosing the Right Minimum Detectable Effect",
+          "anchorText": "Semrush's traffic analytics can help you identify which pages have enough volume for rapid testing",
+          "context": "To find pages with the highest traffic potential, "
+        },
+        {
+          "section": "How to Use This Calculator",
+          "anchorText": "try Semrush's organic research tools to find high-traffic opportunities",
+          "context": "If your current traffic is too low for fast experiments, "
+        }
+      ]
+    },
+    "email-roi-calculator": {
+      "partner": "beehiiv",
+      "postKpi": {
+        "icon": "📧",
+        "headline": "Grow your email list faster?",
+        "subline": "Beehiiv powers newsletters for 100,000+ creators."
+      },
+      "benchmarkCta": "Boost your email performance",
+      "footer": {
+        "headline": "Ready to put these numbers into action?",
+        "subline": "Beehiiv gives you the tools to grow your list, increase engagement, and monetize your newsletter."
+      },
+      "seoLinks": [
+        {
+          "section": "Key Metrics and Benchmarks",
+          "anchorText": "platforms like Beehiiv provide built-in analytics to track and optimize these metrics in real time",
+          "context": "To monitor your email performance against these benchmarks, "
+        },
+        {
+          "section": "How to Improve Your Email ROI",
+          "anchorText": "try Beehiiv's newsletter growth tools to scale your list and revenue",
+          "context": "For a platform purpose-built for newsletter monetization, "
+        }
+      ]
+    },
+    "content-roi-calculator": {
+      "partner": "surferseo",
+      "postKpi": {
+        "icon": "📝",
+        "headline": "Find content topics that drive traffic?",
+        "subline": "SurferSEO optimizes your content for search rankings."
+      },
+      "benchmarkCta": "Optimize your content SEO",
+      "footer": {
+        "headline": "Ready to put these numbers into action?",
+        "subline": "SurferSEO helps you write content that ranks, driving more organic traffic and leads to your business."
+      },
+      "seoLinks": [
+        {
+          "section": "Key Benchmarks for Content Marketing",
+          "anchorText": "SurferSEO's content editor scores your articles against top-ranking competitors in real time",
+          "context": "To ensure your content is optimized for search from the start, "
+        },
+        {
+          "section": "Maximizing Your Content ROI",
+          "anchorText": "try SurferSEO's keyword research and content optimization tools",
+          "context": "For data-driven content planning that maximizes organic traffic, "
+        }
+      ]
+    },
+    "ad-budget-planner": {
+      "partner": "semrush",
+      "postKpi": {
+        "icon": "📈",
+        "headline": "Optimize your ad spend across channels?",
+        "subline": "Semrush reveals where competitors invest their budget."
+      },
+      "benchmarkCta": "See competitor ad budgets",
+      "footer": {
+        "headline": "Ready to put these numbers into action?",
+        "subline": "Semrush shows you exactly where your competitors spend their ad budget, so you can allocate yours smarter."
+      },
+      "seoLinks": [
+        {
+          "section": "How to Plan Your Advertising Budget",
+          "anchorText": "Semrush's advertising research reveals exactly where competitors allocate their budgets",
+          "context": "For data-driven budget planning, "
+        },
+        {
+          "section": "Risk Assessment",
+          "anchorText": "try Semrush's competitive analysis to benchmark your spend against industry leaders",
+          "context": "To validate your allocation strategy, "
+        }
+      ]
+    },
+    "landing-page-estimator": {
+      "partner": "unbounce",
+      "postKpi": {
+        "icon": "🎯",
+        "headline": "Build landing pages that convert?",
+        "subline": "Unbounce lets you A/B test pages without code."
+      },
+      "benchmarkCta": "Build better landing pages",
+      "footer": {
+        "headline": "Ready to put these numbers into action?",
+        "subline": "Unbounce lets you build, test, and optimize landing pages without developers — with AI-powered conversion insights."
+      },
+      "seoLinks": [
+        {
+          "section": "The Economics of Conversion Rate Optimization",
+          "anchorText": "Unbounce's Smart Builder uses AI to create landing pages optimized for your specific audience",
+          "context": "To build pages that convert from day one, "
+        },
+        {
+          "section": "Proven Strategies to Increase Conversions",
+          "anchorText": "try Unbounce's drag-and-drop builder with built-in A/B testing",
+          "context": "For a no-code way to test headlines, CTAs, and layouts, "
+        }
+      ]
+    }
   }
 }

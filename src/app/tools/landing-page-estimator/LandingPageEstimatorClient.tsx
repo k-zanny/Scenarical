@@ -24,6 +24,9 @@ import FAQSection from '@/components/FAQSection';
 import FeedbackWidget from '@/components/FeedbackWidget';
 import { formatCurrency, formatPercent, formatNumber, saveToLocalStorage, loadFromLocalStorage } from '@/lib/utils';
 import benchmarks from '@/data/benchmarks.json';
+import PostKPICTA from '@/components/PostKPICTA';
+import PreRelatedCTA from '@/components/PreRelatedCTA';
+import affiliateData from '@/data/affiliate-links.json';
 
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend, Filler);
 
@@ -346,7 +349,7 @@ export default function LandingPageEstimatorClient() {
             text: 'Reduce cost per visitor — optimize ad targeting or switch to cheaper traffic sources.',
             link: '/tools/cpc-cpm-cpa-converter',
             affiliateText: 'Analyze traffic costs with Semrush → Try free',
-            affiliateUrl: '#semrush-affiliate',
+            affiliateUrl: affiliateData.partners.semrush.url,
           },
           {
             icon: '🎯',
@@ -370,7 +373,7 @@ export default function LandingPageEstimatorClient() {
             icon: '📈',
             text: 'Add social proof — testimonials, reviews, and trust badges increase conversions by 15-30%.',
             affiliateText: 'Optimize with Unbounce → Try free',
-            affiliateUrl: '#unbounce-affiliate',
+            affiliateUrl: affiliateData.partners.unbounce.url,
           },
           {
             icon: '🧪',
@@ -390,7 +393,7 @@ export default function LandingPageEstimatorClient() {
             icon: '📊',
             text: 'Scale traffic by 20-30% while monitoring conversion rate stability.',
             affiliateText: 'Find new traffic channels with Semrush → Try free',
-            affiliateUrl: '#semrush-affiliate',
+            affiliateUrl: affiliateData.partners.semrush.url,
           },
           {
             icon: '🧪',
@@ -414,7 +417,7 @@ export default function LandingPageEstimatorClient() {
           text: 'Scale aggressively — increase ad budget and expand to new traffic channels.',
           link: '/tools/roas-calculator',
           affiliateText: 'Find new channels with Semrush → Try free',
-          affiliateUrl: '#semrush-affiliate',
+          affiliateUrl: affiliateData.partners.semrush.url,
         },
         { icon: '🌐', text: 'Clone this landing page formula for other products or services.' },
         {
@@ -631,6 +634,8 @@ export default function LandingPageEstimatorClient() {
             </div>
           )}
 
+          <PostKPICTA toolSlug="landing-page-estimator" />
+
           {/* Chart — bigger height */}
           <div className="bg-surface rounded-xl border border-surface-lighter p-5 mb-6">
             <h3 className="text-sm font-medium text-label mb-3">Revenue at Different Conversion Rates</h3>
@@ -646,6 +651,8 @@ export default function LandingPageEstimatorClient() {
             min={0}
             max={20}
             suffix="%"
+            affiliateUrl={affiliateData.partners.unbounce.url}
+            affiliateText="Build better landing pages"
           />
 
           <div className="flex gap-3 mt-4">
@@ -756,7 +763,7 @@ export default function LandingPageEstimatorClient() {
             The cost per conversion metric is particularly revealing. If you are paying $2.50 per visitor with
             a 5% conversion rate, each conversion costs you $50 in traffic alone. If your average order value
             is $75, that leaves only $25 of gross margin per sale before fixed costs. Improving conversion rate
-            to 10% cuts your cost per conversion in half — to $25 — and doubles your margin per sale.
+            to 10% cuts your cost per conversion in half — to $25 — and doubles your margin per sale. To build pages that convert from day one, <a href={affiliateData.partners.unbounce.url} target="_blank" rel="sponsored noopener" className="text-accent hover:underline">Unbounce&apos;s Smart Builder uses AI to create landing pages optimized for your specific audience</a>.
           </p>
           <h3 className="text-lg font-semibold text-foreground mt-6 mb-2">How to Use This Landing Page Estimator</h3>
           <p>
@@ -780,7 +787,7 @@ export default function LandingPageEstimatorClient() {
             link that brought visitors to the page. Your CTA button should stand out visually and use
             action-oriented language that communicates value rather than effort. Social proof — testimonials,
             customer counts, trust badges, and case studies — should appear early and prominently, as it can
-            increase conversions by 15-30% on its own.
+            increase conversions by 15-30% on its own. For a no-code way to test headlines, CTAs, and layouts, <a href={affiliateData.partners.unbounce.url} target="_blank" rel="sponsored noopener" className="text-accent hover:underline">try Unbounce&apos;s drag-and-drop builder with built-in A/B testing</a>.
           </p>
         </div>
       </div>
@@ -790,6 +797,7 @@ export default function LandingPageEstimatorClient() {
 
       <FeedbackWidget toolSlug="landing-page-estimator" />
       {/* Related Tools */}
+      <PreRelatedCTA toolSlug="landing-page-estimator" />
       <RelatedTools currentSlug="landing-page-estimator" />
     </div>
   );

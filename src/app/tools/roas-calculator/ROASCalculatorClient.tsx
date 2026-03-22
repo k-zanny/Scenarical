@@ -23,6 +23,9 @@ import ShareButton from '@/components/ShareButton';
 import RelatedTools from '@/components/RelatedTools';
 import FAQSection from '@/components/FAQSection';
 import FeedbackWidget from '@/components/FeedbackWidget';
+import PostKPICTA from '@/components/PostKPICTA';
+import PreRelatedCTA from '@/components/PreRelatedCTA';
+import affiliateData from '@/data/affiliate-links.json';
 import { formatCurrency, saveToLocalStorage, loadFromLocalStorage } from '@/lib/utils';
 // Benchmarks are now handled by industry presets inline
 
@@ -229,7 +232,6 @@ export default function ROASCalculatorClient() {
     pointRadius: 3,
   }));
 
-  const breakEvenValue = spendLevels[0] * m.breakEvenRoas;
   chartDatasets.push({
     label: `Break-even (${m.breakEvenRoas.toFixed(1)}x)`,
     data: spendLevels.map(spend => spend * m.breakEvenRoas),
@@ -268,11 +270,12 @@ export default function ROASCalculatorClient() {
         annotations: {
           breakEvenLabel: {
             type: 'label' as const,
-            xValue: formatCurrency(spendLevels[spendLevels.length - 1], 0),
-            yValue: breakEvenValue,
-            content: [`Break-even: ${formatCurrency(breakEvenValue, 0)}`],
+            xValue: formatCurrency(spendLevels[1], 0),
+            yValue: spendLevels[1] * m.breakEvenRoas,
+            content: [`B/E ${m.breakEvenRoas.toFixed(1)}x`],
             color: '#F59E0B',
-            font: { size: 10 },
+            font: { size: 10, weight: 'bold' as const },
+            position: { x: 'start' as const, y: 'end' as const },
           },
         },
       },
@@ -313,7 +316,7 @@ export default function ROASCalculatorClient() {
             text: `Your CPC of $${inputs.cpc.toFixed(2)} is ${Math.abs(cpcVsAvg).toFixed(0)}% ${cpcVsAvg > 0 ? 'above' : 'below'} the ${industryData.label} average of $${industryData.cpc.toFixed(2)}. Reducing CPC to $${improvedCpc.toFixed(2)} would add ~${Math.round(extraClicks).toLocaleString()} clicks/month, adding an estimated ${formatCurrency(extraRevEstimate)} to revenue.`,
             link: '/tools/cpc-cpm-cpa-converter',
             affiliateText: 'Analyze competitor CPC with Semrush → Try free',
-            affiliateUrl: '#semrush-affiliate',
+            affiliateUrl: affiliateData.partners.semrush.url,
           },
           {
             icon: '🎯',
@@ -338,7 +341,7 @@ export default function ROASCalculatorClient() {
             text: 'Add retargeting to capture warm leads at lower CPA.',
             link: '/tools/ad-budget-planner',
             affiliateText: 'Set up retargeting with Semrush → Try free',
-            affiliateUrl: '#semrush-affiliate',
+            affiliateUrl: affiliateData.partners.semrush.url,
           },
         ],
       };
@@ -358,7 +361,7 @@ export default function ROASCalculatorClient() {
             text: 'A/B test ad creatives to find even higher-performing variants.',
             link: '/tools/ab-test-calculator',
             affiliateText: 'Track performance with Semrush → Try free',
-            affiliateUrl: '#semrush-affiliate',
+            affiliateUrl: affiliateData.partners.semrush.url,
           },
         ],
       };
@@ -372,7 +375,7 @@ export default function ROASCalculatorClient() {
           text: `Scale aggressively — increasing budget from ${formatCurrency(inputs.adSpend)} to ${formatCurrency(inputs.adSpend * 1.3)} at your current ${m.roas.toFixed(1)}x ROAS could generate an additional ${formatCurrency(inputs.adSpend * 0.3 * (m.roas - m.breakEvenRoas))} in net profit.`,
           link: '/tools/ad-budget-planner',
           affiliateText: 'Find new channels with Semrush → Try free',
-          affiliateUrl: '#semrush-affiliate',
+          affiliateUrl: affiliateData.partners.semrush.url,
         },
         {
           icon: '📧',
@@ -633,6 +636,8 @@ export default function ROASCalculatorClient() {
             </div>
           )}
 
+          <PostKPICTA toolSlug="roas-calculator" />
+
           {/* Chart — 1.5x height */}
           <div className="bg-surface rounded-xl border border-surface-lighter p-5 mb-6">
             <h3 className="text-sm font-medium text-label mb-3">Revenue vs. Ad Spend Scenarios</h3>
@@ -648,6 +653,8 @@ export default function ROASCalculatorClient() {
             min={0}
             max={Math.max(8, m.roas * 1.3)}
             suffix="x"
+            affiliateUrl={affiliateData.partners.semrush.url}
+            affiliateText="Analyze your competitors"
           />
 
           <div className="flex gap-3 mt-4">
@@ -736,20 +743,21 @@ export default function ROASCalculatorClient() {
           <p>
             Use the scenario comparison feature to model different strategies side by side — what happens
             if you increase budget by 50%? What if you improve conversion rate? The Risk Radar identifies
-            which variable has the biggest impact on your profits, so you know where to focus optimization.
+            which variable has the biggest impact on your profits, so you know where to focus optimization. For deeper analysis of your competitors&apos; ad spend and keywords, <a href={affiliateData.partners.semrush.url} target="_blank" rel="sponsored noopener" className="text-accent hover:underline">try Semrush&apos;s free competitive analysis</a>.
           </p>
           <h3 className="text-lg font-semibold text-foreground mt-6 mb-2">Industry Benchmarks</h3>
           <p>
             Average ROAS varies significantly by platform and industry. Google Ads averages around 2.0x,
             while Facebook Ads typically delivers 2.5x ROAS. E-commerce brands often target 4.0x+ ROAS,
             while lead generation campaigns may accept lower ROAS if the customer lifetime value is high.
-            Select your industry above to see relevant benchmarks throughout the calculator.
+            Select your industry above to see relevant benchmarks throughout the calculator. To see how your specific campaigns compare, <a href={affiliateData.partners.semrush.url} target="_blank" rel="sponsored noopener" className="text-accent hover:underline">Semrush provides real-time ROAS tracking across all your ad channels</a>.
           </p>
         </div>
       </div>
 
       <FAQSection faqs={faqs} />
       <FeedbackWidget toolSlug="roas-calculator" />
+      <PreRelatedCTA toolSlug="roas-calculator" />
       <RelatedTools currentSlug="roas-calculator" />
     </div>
   );

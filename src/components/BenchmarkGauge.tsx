@@ -8,6 +8,8 @@ interface BenchmarkGaugeProps {
   max?: number;
   suffix?: string;
   prefix?: string;
+  affiliateUrl?: string;
+  affiliateText?: string;
 }
 
 export default function BenchmarkGauge({
@@ -18,6 +20,8 @@ export default function BenchmarkGauge({
   max,
   suffix = '',
   prefix = '',
+  affiliateUrl,
+  affiliateText,
 }: BenchmarkGaugeProps) {
   const effectiveMax = max || benchmark * 3;
   const valuePos = Math.min(((value - min) / (effectiveMax - min)) * 100, 100);
@@ -25,10 +29,10 @@ export default function BenchmarkGauge({
 
   const getStatus = () => {
     const ratio = value / benchmark;
-    if (ratio >= 1.5) return { text: 'Top Performer', color: 'text-success', badge: 'bg-success/20 text-success' };
-    if (ratio >= 1.0) return { text: 'Above Average', color: 'text-success', badge: 'bg-success/20 text-success' };
-    if (ratio >= 0.7) return { text: 'On Track', color: 'text-warning', badge: 'bg-warning/20 text-warning' };
-    return { text: 'Below Average', color: 'text-danger', badge: 'bg-danger/20 text-danger' };
+    if (ratio >= 1.5) return { text: 'Top Performer', badge: 'bg-success/20 text-success', isBelowAvg: false };
+    if (ratio >= 1.0) return { text: 'Above Average', badge: 'bg-success/20 text-success', isBelowAvg: false };
+    if (ratio >= 0.7) return { text: 'On Track', badge: 'bg-warning/20 text-warning', isBelowAvg: false };
+    return { text: 'Below Average', badge: 'bg-danger/20 text-danger', isBelowAvg: true };
   };
 
   const status = getStatus();
@@ -68,6 +72,19 @@ export default function BenchmarkGauge({
       <div className="flex justify-between items-center mt-4">
         <span className="text-xs text-muted">Your value: <span className="font-mono text-foreground">{prefix}{value.toLocaleString()}{suffix}</span></span>
       </div>
+      {status.isBelowAvg && affiliateUrl && affiliateText && (
+        <p className="text-xs mt-2">
+          Below average?{' '}
+          <a
+            href={affiliateUrl}
+            target="_blank"
+            rel="sponsored noopener"
+            className="text-[#3B82F6] hover:underline"
+          >
+            {affiliateText} →
+          </a>
+        </p>
+      )}
     </div>
   );
 }
