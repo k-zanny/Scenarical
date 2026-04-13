@@ -19,7 +19,9 @@
       "Bash(taskkill //F //IM node.exe)",
       "Bash(cd:*)",
       "Bash(curl -s http://localhost:3000)",
-      "Bash(ipconfig)"
+      "Bash(ipconfig)",
+      "Bash(git rebase:*)",
+      "Bash(GIT_EDITOR=true git rebase --continue)"
     ]
   }
 }
