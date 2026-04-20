@@ -8,9 +8,19 @@ jobs:
   keepalive:
     runs-on: ubuntu-latest
     steps:
-      - name: Ping Supabase REST API
+      - name: Write and delete keepalive record
         run: |
-          curl -sf \
-            "${{ secrets.SUPABASE_URL }}/rest/v1/feedback?select=id&limit=1" \
+          # INSERT（書き込み）
+          curl -sf -X POST \
+            "${{ secrets.SUPABASE_URL }}/rest/v1/feedback" \
+            -H "apikey: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}" \
+            -H "Authorization: Bearer ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}" \
+            -H "Content-Type: application/json" \
+            -H "Prefer: return=representation" \
+            -d '{"tool_slug":"keepalive","message":"keepalive ping","email":null}'
+
+          # DELETE（削除）
+          curl -sf -X DELETE \
+            "${{ secrets.SUPABASE_URL }}/rest/v1/feedback?tool_slug=eq.keepalive" \
             -H "apikey: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}" \
             -H "Authorization: Bearer ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}"
