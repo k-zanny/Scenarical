@@ -3,8 +3,8 @@ import { generateToolJsonLd } from '@/components/ToolPageWrapper';
 import AdRevenueCalculatorClient from './AdRevenueCalculatorClient';
 
 export const metadata: Metadata = {
-  title: 'Website Ad Revenue Calculator — Free Online Calculator | Scenarical',
-  description: 'Estimate your website ad revenue based on pageviews, RPM, fill rate, and viewability. Model standard vs premium ad inventory to optimize your monetization strategy.',
+  title: 'Ad Revenue Calculator 2026: Estimate Website Earnings | Scenarical',
+  description: 'Calculate how much your website can earn from display ads. Real industry RPM benchmarks for blogs, news sites, niche sites. Free tool.',
 };
 
 export default function AdRevenueCalculatorPage() {
