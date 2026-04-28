@@ -8,19 +8,6 @@ jobs:
   keepalive:
     runs-on: ubuntu-latest
     steps:
-      - name: Write and delete keepalive record
+      - name: Ping Vercel keepalive endpoint
         run: |
-          # INSERT（書き込み）
-          curl -sf -X POST \
-            "${{ secrets.SUPABASE_URL }}/rest/v1/feedback" \
-            -H "apikey: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}" \
-            -H "Authorization: Bearer ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}" \
-            -H "Content-Type: application/json" \
-            -H "Prefer: return=representation" \
-            -d '{"tool_slug":"keepalive","message":"keepalive ping","email":null}'
-
-          # DELETE（削除）
-          curl -sf -X DELETE \
-            "${{ secrets.SUPABASE_URL }}/rest/v1/feedback?tool_slug=eq.keepalive" \
-            -H "apikey: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}" \
-            -H "Authorization: Bearer ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}"
+          curl -sf "https://scenarical.com/api/keepalive?secret=${{ secrets.KEEPALIVE_SECRET }}"
