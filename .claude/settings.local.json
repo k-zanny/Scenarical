@@ -20,11 +20,28 @@
       "Bash(cd:*)",
       "Bash(curl -s http://localhost:3000)",
       "Bash(ipconfig)",
-      "Bash(git pull:*)",
+      "Bash(gh repo:*)",
+      "Bash(npx vercel:*)",
+      "Bash(curl -s -o /dev/null -w \"HTTP %{http_code}\" https://scenarical.com)",
+      "Bash(curl -s -o /dev/null -w \"HTTP %{http_code}\" https://scenarical.com/tools/roas-calculator)",
+      "Bash(grep -E \"\\\\.\\(tsx|ts|json\\)$\")",
+      "Bash(xxd)",
+      "Bash(curl -s http://localhost:3456/tools/roas-calculator)",
+      "Bash(for tool:*)",
+      "Bash(do echo:*)",
+      "Bash(pkill -f \"next dev\")",
       "Bash(git commit:*)",
-      "Bash(git config:*)",
       "Bash(git push:*)",
-      "Bash(git stash:*)"
+      "Bash(xargs ls:*)",
+      "Bash(find /c/Users/kn/scenarical/src -name ComingSoon* -o -name coming-soon*)",
+      "Bash(npx tsc:*)",
+      "Bash(python3:*)",
+      "Bash(echo \"exists: $?\")",
+      "Bash(\"C:/Users/kn/scenarical/src/app/tools/ai-agent-cost-estimator/AIAgentCostEstimatorClient.tsx\")",
+      "Bash(\"C:/Users/kn/scenarical/src/app/tools/token-counter/TokenCounterClient.tsx\")",
+      "Bash(\"C:/Users/kn/scenarical/src/app/tools/da-impact-calculator/DAImpactCalculatorClient.tsx\")",
+      "Bash(\"C:/Users/kn/scenarical/src/app/tools/traffic-value-calculator/TrafficValueCalculatorClient.tsx\")",
+      "Bash(node _gen_tools.js)"
     ]
   }
 }
