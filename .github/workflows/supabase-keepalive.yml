@@ -4,6 +4,9 @@ on:
     - cron: '0 */6 * * *'
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   keepalive:
     runs-on: ubuntu-latest
@@ -11,3 +14,16 @@ jobs:
       - name: Ping Vercel keepalive endpoint
         run: |
           curl -sf "https://scenarical.com/api/keepalive?secret=${{ secrets.KEEPALIVE_SECRET }}"
+
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Append keepalive log and push
+        run: |
+          mkdir -p logs
+          echo "$(date -u '+%Y-%m-%d %H:%M:%S UTC') - keepalive ping OK" >> logs/keepalive.log
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add logs/keepalive.log
+          git commit -m "chore: keepalive heartbeat $(date -u '+%Y-%m-%d %H:%M:%S UTC')"
+          git push
