@@ -41,7 +41,9 @@
       "Bash(\"C:/Users/kn/scenarical/src/app/tools/token-counter/TokenCounterClient.tsx\")",
       "Bash(\"C:/Users/kn/scenarical/src/app/tools/da-impact-calculator/DAImpactCalculatorClient.tsx\")",
       "Bash(\"C:/Users/kn/scenarical/src/app/tools/traffic-value-calculator/TrafficValueCalculatorClient.tsx\")",
-      "Bash(node _gen_tools.js)"
+      "Bash(node _gen_tools.js)",
+      "Bash(git stash:*)",
+      "Bash(openssl rand:*)"
     ]
   }
 }
